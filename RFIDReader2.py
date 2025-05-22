@@ -88,7 +88,8 @@ def process_tags_console():
     # seen_epcs = set()
     while True:
         try:
-            tag = TAG_QUEUE.get(timeout=0.2)
+            # tag = TAG_QUEUE.get(timeout=0.2)
+            tag = TAG_QUEUE.get()
             epc = tag["epc"]
             # if epc not in seen_epcs:
             #     seen_epcs.add(epc)
@@ -158,7 +159,8 @@ def main():
     config = LLRPReaderConfig()
     config.reset_on_connect = True
     config.start_inventory = False
-    config.tx_power = {0: 0, 1: 0}
+    # config.tx_power = {0: 0, 1: 0}
+    config.tx_power_dbm = 30
     config.antennas = [0, 1]
     config.report_every_n_tags = 1  # Report after every tag seen
     config.reader_mode = None  # or a valid string like 'AutoSetDenseReader'
