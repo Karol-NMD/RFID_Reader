@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e3e28f-042c-465b-84b2-293fa4a05c73" name="Changes" comment="" />
+    <list default="true" id="a7e3e28f-042c-465b-84b2-293fa4a05c73" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/RFIDReader2.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/RFIDReader2.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/warn-RFIDReader2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/warn-RFIDReader2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RFIDReader2/xref-RFIDReader2.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/RFIDReader2/xref-RFIDReader2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/RFIDReader2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/RFIDReader2.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
