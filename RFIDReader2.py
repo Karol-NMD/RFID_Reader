@@ -160,8 +160,8 @@ def main():
     config.reset_on_connect = True
     config.start_inventory = False
     # config.tx_power = {0: 0, 1: 0}
-    config.antennas = [1, 2]
-    config.tx_power_dbm = {1: 30, 2: 30}
+    config.antennas = [0, 1]
+    config.tx_power_dbm = {0: 30, 1: 30}
     config.report_every_n_tags = 1  # Report after every tag seen
     config.reader_mode = None  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = None  # or a mode like 'DualTarget'
