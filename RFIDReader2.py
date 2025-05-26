@@ -3,6 +3,7 @@
 import time
 import logging
 import threading
+import sqlite3
 from queue import Queue, Empty
 from typing import Optional
 from collections import deque
@@ -24,12 +25,48 @@ READER: Optional[LLRPReaderClient] = None
 TAG_QUEUE = Queue()
 SEEN_TAGS = deque(maxlen=100)  # Keep latest 100 for reference
 LOG_FILE_PATH = "tag_reads.txt"
+DB_FILE = "tags.db"
 
 # -------- LOGGING SETUP -------- #
 logging.basicConfig(level=logging.INFO)
 sllurp_logger = logging.getLogger("sllurp")
 sllurp_logger.setLevel(logging.INFO)
 sllurp_logger.addHandler(logging.StreamHandler())
+
+
+# -------- DATABASE SETUP -------- #
+def init_db():
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS tag_reads (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            epc TEXT NOT NULL,
+            antenna INTEGER,
+            channel INTEGER,
+            seen_count INTEGER,
+            last_seen TEXT
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+
+def save_tag_to_db(tag_data):
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute('''
+        INSERT INTO tag_reads (epc, antenna, channel, seen_count, last_seen)
+        VALUES (?, ?, ?, ?, ?)
+    ''', (
+        tag_data["epc"],
+        tag_data["antenna"],
+        tag_data["channel"],
+        tag_data["seen_count"],
+        tag_data["last_seen"]
+    ))
+    conn.commit()
+    conn.close()
 
 
 # -------- CALLBACKS -------- #
@@ -100,6 +137,7 @@ def process_tags_console():
             with open(LOG_FILE_PATH, "a") as f:
                 f.write(f"{tag['last_seen']}, EPC: {epc}, Antenna: {tag['antenna']},"
                         f" Channel: {tag['channel']}, SeenCount: {tag['seen_count']}\n")
+            save_tag_to_db(tag)  # Save to SQLite
         except Empty:
             continue
         except Exception as e:
@@ -131,6 +169,9 @@ def user_interface():
 def main():
     global READER
     global LOG_FILE_PATH
+
+    # Setup SQLite
+    init_db()
 
     root = tk.Tk()
     root.withdraw()
