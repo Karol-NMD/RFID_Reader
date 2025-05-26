@@ -200,9 +200,8 @@ def main():
     config = LLRPReaderConfig()
     config.reset_on_connect = True
     config.start_inventory = False
-    # config.tx_power = {0: 0, 1: 0}
-    config.antennas = [1]
-    config.tx_power_dbm = {1: 27.0}
+    config.tx_power = {1: 0, 2: 0}
+    config.antennas = [1, 2]
     config.report_every_n_tags = 1  # Report after every tag seen
     config.reader_mode = None  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = None  # or a mode like 'DualTarget'
