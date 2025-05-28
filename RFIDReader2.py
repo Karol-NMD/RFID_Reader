@@ -68,6 +68,7 @@ def save_tag_to_db(tag_data):
     conn.commit()
     conn.close()
 
+
 def view_database_contents():
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
@@ -80,7 +81,6 @@ def view_database_contents():
     print(f"\n📋 All tags in the database:")
     for row in rows:
         print(f"ID: {row[0]} | EPC: {row[1]} | Ant: {row[2]} | Ch: {row[3]} | Seen: {row[4]} | Time: {row[5]}")
-
 
 
 # -------- CALLBACKS -------- #
