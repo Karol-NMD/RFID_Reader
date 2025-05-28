@@ -68,6 +68,20 @@ def save_tag_to_db(tag_data):
     conn.commit()
     conn.close()
 
+def view_database_contents():
+    conn = sqlite3.connect(DB_FILE)
+    c = conn.cursor()
+    c.execute("SELECT * FROM tag_reads ORDER BY id ASC")  # Remove LIMIT
+    rows = c.fetchall()
+    conn.close()
+    if not rows:
+        print("📭 No tags in the database yet.")
+        return
+    print(f"\n📋 All tags in the database:")
+    for row in rows:
+        print(f"ID: {row[0]} | EPC: {row[1]} | Ant: {row[2]} | Ch: {row[3]} | Seen: {row[4]} | Time: {row[5]}")
+
+
 
 # -------- CALLBACKS -------- #
 def tag_report_cb(_reader, tag_reports):
@@ -148,7 +162,7 @@ def process_tags_console():
 # -------- USER INTERFACE LOOP -------- #
 def user_interface():
     while True:
-        print("\nCommands: [start] [stop] [clear] [state] [exit]")
+        print("\nCommands: [start] [stop] [clear] [state] [view] [exit]")
         cmd = input(">> ").strip().lower()
         if cmd == "start":
             start_reading()
@@ -158,6 +172,8 @@ def user_interface():
             clear_tag_data()
         elif cmd == "state":
             print_reader_state()
+        elif cmd == "view":
+            view_database_contents()
         elif cmd == "exit":
             stop_reading()
             break
