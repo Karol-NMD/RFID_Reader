@@ -92,22 +92,20 @@ def tag_report_cb(_reader, tag_reports):
     """Callback for tag reads"""
     for tag in tag_reports:
         try:
-            raw_epc_bytes = tag["EPC"]
-            print("RAW EPC: " + str(raw_epc_bytes))  # Temporal
-            epc_hex = raw_epc_bytes.hex().upper()
-            print("Supposed EPC in Hex: " + epc_hex)  # Temporal
+            epc = tag["EPC"]
+            epc_hex = epc.decode("ascii").upper()
             try:
-                epc_ascii = raw_epc_bytes.decode("ascii")
-                print("Supposed EPC in ASCII: " + epc_ascii)  # Temporal
+                epc_real_bytes = bytes.fromhex(epc.decode("ascii"))
+                epc_real_ascii = epc_real_bytes.decode("ascii")
             except UnicodeDecodeError:
-                epc_ascii = None  # Or set to "<non-ascii>"
+                epc_real_ascii = None  # Or set to "<non-ascii>"
 
             last_seen_raw = tag.get("LastSeenTimestampUTC")
             last_seen_str = datetime.datetime.utcfromtimestamp(last_seen_raw / 1_000_000).strftime("%Y-%m-%d %H:%M:%S")
 
             tag_data = {
                 "epc_hex": epc_hex,
-                "epc_ascii": epc_ascii,
+                "epc_ascii": epc_real_ascii,
                 "channel": tag.get("ChannelIndex"),
                 "antenna": tag.get("AntennaID"),
                 "last_seen": last_seen_str,
