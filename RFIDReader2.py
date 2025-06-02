@@ -236,7 +236,7 @@ def main():
     config.tx_power = {1: 0, 2: 0}
     config.antennas = [1, 2]
     config.report_every_n_tags = 1  # Report after every tag seen
-    config.reader_mode = 'AutoSetDenseReader'  # or a valid string like 'AutoSetDenseReader'
+    config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
 
     # Configure the fields to include in each tag report
