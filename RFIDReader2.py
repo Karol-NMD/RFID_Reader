@@ -93,9 +93,12 @@ def tag_report_cb(_reader, tag_reports):
     for tag in tag_reports:
         try:
             raw_epc_bytes = tag["EPC"]
+            print("RAW EPC: " + str(raw_epc_bytes))  # Temporal
             epc_hex = raw_epc_bytes.hex().upper()
+            print("Supposed EPC in Hex: " + epc_hex)  # Temporal
             try:
                 epc_ascii = raw_epc_bytes.decode("ascii")
+                print("Supposed EPC in ASCII: " + epc_ascii)  # Temporal
             except UnicodeDecodeError:
                 epc_ascii = None  # Or set to "<non-ascii>"
 
@@ -125,7 +128,7 @@ def connection_event_cb(_reader, event):
 
 # -------- COMMAND FUNCTIONS -------- #
 def clear_tag_data():
-    SEEN_TAGS.clear()
+    # SEEN_TAGS.clear()
     print("🧹 Tag data cleared.")
 
 
@@ -230,7 +233,7 @@ def main():
 
     # Create configuration with frequent reporting
     config = LLRPReaderConfig()
-    config.reset_on_connect = True
+    config.reset_on_connect = False
     config.start_inventory = False
     config.tx_power = {1: 0, 2: 0}
     config.antennas = [1, 2]
