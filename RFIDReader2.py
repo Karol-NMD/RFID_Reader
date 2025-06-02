@@ -87,17 +87,20 @@ def view_database_contents():
 def tag_report_cb(_reader, tag_reports):
     """Callback for tag reads"""
     for tag in tag_reports:
+        epc_bytes = tag["EPC"]
         try:
-            tag_data = {
-                "epc": tag["EPC"].decode("ascii"),
-                "channel": tag.get("ChannelIndex"),
-                "antenna": tag.get("AntennaID"),
-                "last_seen": tag.get("LastSeenTimestampUTC"),
-                "seen_count": tag.get("TagSeenCount"),
-            }
-            TAG_QUEUE.put(tag_data)
-        except Exception as e:
-            print(f"⚠️ Error parsing tag: {e}")
+            epc_str = epc_bytes.decode("ascii")
+        except UnicodeDecodeError:
+            epc_str = epc_bytes.hex()  # Fallback to hex
+
+        tag_data = {
+            "epc": epc_str,
+            "channel": tag.get("ChannelIndex"),
+            "antenna": tag.get("AntennaID"),
+            "last_seen": tag.get("LastSeenTimestampUTC"),
+            "seen_count": tag.get("TagSeenCount"),
+        }
+        TAG_QUEUE.put(tag_data)
 
 
 def connection_event_cb(_reader, event):
