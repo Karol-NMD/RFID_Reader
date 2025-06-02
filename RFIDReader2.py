@@ -156,7 +156,7 @@ def process_tags_console():
         try:
             # tag = TAG_QUEUE.get(timeout=0.2)
             tag = TAG_QUEUE.get()
-            epc = tag["epc"]
+            # epc = tag["epc"]
             # if epc not in seen_epcs:
             #     seen_epcs.add(epc)
             # SEEN_TAGS.append(tag)
