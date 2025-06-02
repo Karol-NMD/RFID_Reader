@@ -4,6 +4,7 @@ import time
 import logging
 import threading
 import sqlite3
+import datetime
 from queue import Queue, Empty
 from typing import Optional
 from collections import deque
@@ -41,7 +42,8 @@ def init_db():
     c.execute('''
         CREATE TABLE IF NOT EXISTS tag_reads (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            epc TEXT NOT NULL,
+            epc_hex TEXT NOT NULL,
+            epc_ascii TEXT,
             antenna INTEGER,
             channel INTEGER,
             seen_count INTEGER,
@@ -56,10 +58,11 @@ def save_tag_to_db(tag_data):
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
     c.execute('''
-        INSERT INTO tag_reads (epc, antenna, channel, seen_count, last_seen)
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO tag_reads (epc_hex, epc_ascii, antenna, channel, seen_count, last_seen)
+        VALUES (?, ?, ?, ?, ?, ?)
     ''', (
-        tag_data["epc"],
+        tag_data["epc_hex"],
+        tag_data["epc_ascii"],
         tag_data["antenna"],
         tag_data["channel"],
         tag_data["seen_count"],
@@ -80,27 +83,36 @@ def view_database_contents():
         return
     print(f"\n📋 All tags in the database:")
     for row in rows:
-        print(f"ID: {row[0]} | EPC: {row[1]} | Ant: {row[2]} | Ch: {row[3]} | Seen: {row[4]} | Time: {row[5]}")
+        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | Ant: {row[3]} | Ch: {row[4]} | Seen: {row[5]} "
+              f"| Time: {row[6]}")
 
 
 # -------- CALLBACKS -------- #
 def tag_report_cb(_reader, tag_reports):
     """Callback for tag reads"""
     for tag in tag_reports:
-        epc_bytes = tag["EPC"]
         try:
-            epc_str = epc_bytes.decode("ascii")
-        except UnicodeDecodeError:
-            epc_str = epc_bytes.hex()  # Fallback to hex
+            raw_epc_bytes = tag["EPC"]
+            epc_hex = raw_epc_bytes.hex().upper()
+            try:
+                epc_ascii = raw_epc_bytes.decode("ascii")
+            except UnicodeDecodeError:
+                epc_ascii = None  # Or set to "<non-ascii>"
 
-        tag_data = {
-            "epc": epc_str,
-            "channel": tag.get("ChannelIndex"),
-            "antenna": tag.get("AntennaID"),
-            "last_seen": tag.get("LastSeenTimestampUTC"),
-            "seen_count": tag.get("TagSeenCount"),
-        }
-        TAG_QUEUE.put(tag_data)
+            last_seen_raw = tag.get("LastSeenTimestampUTC")
+            last_seen_str = datetime.datetime.utcfromtimestamp(last_seen_raw / 1_000_000).strftime("%Y-%m-%d %H:%M:%S")
+
+            tag_data = {
+                "epc_hex": epc_hex,
+                "epc_ascii": epc_ascii,
+                "channel": tag.get("ChannelIndex"),
+                "antenna": tag.get("AntennaID"),
+                "last_seen": last_seen_str,
+                "seen_count": tag.get("TagSeenCount"),
+            }
+            TAG_QUEUE.put(tag_data)
+        except Exception as e:
+            print(f"⚠️ Error parsing tag: {e}")
 
 
 def connection_event_cb(_reader, event):
@@ -147,12 +159,13 @@ def process_tags_console():
             epc = tag["epc"]
             # if epc not in seen_epcs:
             #     seen_epcs.add(epc)
-            SEEN_TAGS.append(tag)
+            # SEEN_TAGS.append(tag)
             print(f"\n📦 New tag:")
-            print(f" - EPC: {epc} | Antenna: {tag['antenna']} |"
-                  f" Ch: {tag['channel']} | Seen: {tag['seen_count']}x | Time: {tag['last_seen']}")
+            print(f" - EPC (HEX): {tag['epc_hex']} | EPC (ASCII): {tag['epc_ascii']} | "
+                  f"Antenna: {tag['antenna']} | Ch: {tag['channel']} | Seen: {tag['seen_count']}x | "
+                  f"Time: {tag['last_seen']}")
             with open(LOG_FILE_PATH, "a") as f:
-                f.write(f"{tag['last_seen']}, EPC: {epc}, Antenna: {tag['antenna']},"
+                f.write(f"{tag['last_seen']}, EPC: {tag['epc_hex']} || {tag['epc_ascii']}, Antenna: {tag['antenna']},"
                         f" Channel: {tag['channel']}, SeenCount: {tag['seen_count']}\n")
             save_tag_to_db(tag)  # Save to SQLite
         except Empty:
