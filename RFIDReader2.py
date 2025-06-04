@@ -108,6 +108,10 @@ def tag_report_cb(_reader, tag_reports):
             tid_value = None
             if "TID" in tag:
                 tid_value = tag["TID"].decode("ascii").upper()
+            elif "C1G2PC" in tag:
+                pc_bits = tag["C1G2PC"]
+                if pc_bits:
+                    tid_value = f"{pc_bits:04X}"
 
             tag_data = {
                 "epc_hex": epc_hex,
@@ -246,6 +250,9 @@ def main():
     config.report_every_n_tags = 1  # Report after every tag seen
     config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
+    config.impinj_options = {
+        'SuppressMonza': False, # Important for TID reading on Impinj readers
+    }
 
     # Configure the fields to include in each tag report
     config.tag_content_selector = {
@@ -258,12 +265,13 @@ def main():
         'EnableFirstSeenTimestamp': True,
         'EnableLastSeenTimestamp': True,
         'EnableTagSeenCount': True,
-        'EnableAccessSpecID': False,
+        'EnableAccessSpecID': True,
         # Enable TID memory bank reading
-        'EnableC1G2PC': False,
+        'EnableC1G2PC': True,
         'EnableCRC': False,
         'EnableXPC': False,
         'EnableTID': True,
+        'EnableUserMemory': False,
     }
 
     # Connect and bind callbacks
@@ -271,6 +279,11 @@ def main():
     READER.add_tag_report_callback(tag_report_cb)
     READER.add_event_callback(connection_event_cb)
     READER.connect()
+
+    # Additional TID configuration for some readers
+    if hasattr(READER.llrp, 'enableImpinjExtensions'):
+        READER.llrp.enableImpinjExtensions(True)
+        READER.llrp.enableAccessReport(True)
 
     time.sleep(2)
 
