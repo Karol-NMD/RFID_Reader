@@ -44,6 +44,7 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             epc_hex TEXT NOT NULL,
             epc_ascii TEXT,
+            tid TEXT,
             antenna INTEGER,
             channel INTEGER,
             seen_count INTEGER,
@@ -58,11 +59,12 @@ def save_tag_to_db(tag_data):
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
     c.execute('''
-        INSERT INTO tag_reads (epc_hex, epc_ascii, antenna, channel, seen_count, last_seen)
-        VALUES (?, ?, ?, ?, ?, ?)
+        INSERT INTO tag_reads (epc_hex, epc_ascii, tid, antenna, channel, seen_count, last_seen)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
     ''', (
         tag_data["epc_hex"],
         tag_data["epc_ascii"],
+        tag_data["tid"],
         tag_data["antenna"],
         tag_data["channel"],
         tag_data["seen_count"],
@@ -83,8 +85,8 @@ def view_database_contents():
         return
     print(f"\n📋 All tags in the database:")
     for row in rows:
-        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | Ant: {row[3]} | Ch: {row[4]} | Seen: {row[5]} "
-              f"| Time: {row[6]}")
+        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | TID: {row[3]} | Ant: {row[4]} | Ch: {row[5]} "
+              f"| Seen: {row[6]} | Time: {row[7]}")
 
 
 # -------- CALLBACKS -------- #
@@ -103,9 +105,14 @@ def tag_report_cb(_reader, tag_reports):
             last_seen_raw = tag.get("LastSeenTimestampUTC")
             last_seen_str = datetime.datetime.utcfromtimestamp(last_seen_raw / 1_000_000).strftime("%Y-%m-%d %H:%M:%S")
 
+            tid_value = None
+            if "TID" in tag:
+                tid_value = tag["TID"].decode("ascii").upper()
+
             tag_data = {
                 "epc_hex": epc_hex,
                 "epc_ascii": epc_real_ascii,
+                "tid": tid_value,
                 "channel": tag.get("ChannelIndex"),
                 "antenna": tag.get("AntennaID"),
                 "last_seen": last_seen_str,
@@ -162,11 +169,12 @@ def process_tags_console():
             #     seen_epcs.add(epc)
             # SEEN_TAGS.append(tag)
             print(f"\n📦 New tag:")
-            print(f" - EPC (HEX): {tag['epc_hex']} | EPC (ASCII): {tag['epc_ascii']} | "
+            print(f" - EPC (HEX): {tag['epc_hex']} | EPC (ASCII): {tag['epc_ascii']} | TID: {tag['tid']} | "
                   f"Antenna: {tag['antenna']} | Ch: {tag['channel']} | Seen: {tag['seen_count']}x | "
                   f"Time: {tag['last_seen']}")
             with open(LOG_FILE_PATH, "a") as f:
-                f.write(f"{tag['last_seen']}, EPC: {tag['epc_hex']} || {tag['epc_ascii']}, Antenna: {tag['antenna']},"
+                f.write(f"{tag['last_seen']}, EPC: {tag['epc_hex']} || {tag['epc_ascii']}, TID: {tag['tid']},"
+                        f" Antenna: {tag['antenna']},"
                         f" Channel: {tag['channel']}, SeenCount: {tag['seen_count']}\n")
             save_tag_to_db(tag)  # Save to SQLite
         except Empty:
@@ -251,6 +259,11 @@ def main():
         'EnableLastSeenTimestamp': True,
         'EnableTagSeenCount': True,
         'EnableAccessSpecID': False,
+        # Enable TID memory bank reading
+        'EnableC1G2PC': False,
+        'EnableCRC': False,
+        'EnableXPC': False,
+        'EnableTID': True,
     }
 
     # Connect and bind callbacks
