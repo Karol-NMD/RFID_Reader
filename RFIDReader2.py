@@ -275,6 +275,9 @@ def main():
 
     def enable_tid_reading(reader_llrp):
         # Construct the AccessSpec message manually
+        def on_access_spec_added(msg):
+            logging.info("AccessSpec added response: %s", msg)
+
         access_spec = {
             'AccessSpecID': 123,  # Arbitrary unique ID
             'AntennaID': 0,  # 0 means any antenna
@@ -310,9 +313,9 @@ def main():
             },
         }
 
-        reader_llrp.send_ADD_ACCESSSPEC(access_spec)
+        reader_llrp.send_ADD_ACCESSSPEC(access_spec, on_access_spec_added)
         reader_llrp.send_ENABLE_ACCESSSPEC({'AccessSpecID': 123})
-        logging.info("AccessSpec to read TID added.")
+        logging.info("AccessSpec to read TID has been added and enabled.")
 
     enable_tid_reading(READER.llrp)
 
