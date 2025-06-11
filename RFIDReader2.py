@@ -284,8 +284,8 @@ def main():
             'ProtocolID': 1,
             'CurrentState': False,
             'ROSpecID': 0,
-            'AccessSpecStopTrigger': 1,
-            'OperationCountValue': 0,
+            'AccessSpecStopTrigger': 1,  # ✔️ Not a dictionary!
+            'OperationCountValue': 0,  # ✔️ This is correctly flattened
             'AccessCommand': {
                 'TagSpec': {
                     'MatchType': 1,
@@ -298,7 +298,7 @@ def main():
                     'OpSpecID': 1,
                     'OpSpec': {
                         'C1G2Read': {
-                            'MB': 2,  # TID memory bank
+                            'MB': 2,  # ✔️ TID memory bank
                             'WordPointer': 0,
                             'WordCount': 6,
                             'AccessPassword': 0,
