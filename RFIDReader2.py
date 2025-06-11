@@ -18,6 +18,8 @@ from sllurp.llrp import (
     LLRPReaderState,
 )
 
+from sllurp.llrp_proto import LLRPMessageDict
+
 # -------- RFID CONFIGURATION -------- #
 PORT = LLRP_DEFAULT_PORT
 
@@ -105,13 +107,15 @@ def tag_report_cb(_reader, tag_reports):
             last_seen_raw = tag.get("LastSeenTimestampUTC")
             last_seen_str = datetime.datetime.utcfromtimestamp(last_seen_raw / 1_000_000).strftime("%Y-%m-%d %H:%M:%S")
 
-            tid_value = None
-            if "TID" in tag:
-                tid_value = tag["TID"].decode("ascii").upper()
-            elif "C1G2PC" in tag:
-                pc_bits = tag["C1G2PC"]
-                if pc_bits:
-                    tid_value = f"{pc_bits:04X}"
+            tid_value = None  # The need of a program to fetch this TID
+
+            op_spec_result = tag.get("AccessCommandOpSpecResult")
+            if op_spec_result and "C1G2ReadOpSpecResult" in op_spec_result:
+                try:
+                    tid_bytes = op_spec_result["C1G2ReadOpSpecResult"]["ReadData"]
+                    tid_value = tid_bytes.hex().upper()
+                except Exception as e:
+                    logging.warning(f"Failed to parse TID: {e}")
 
             tag_data = {
                 "epc_hex": epc_hex,
@@ -250,9 +254,6 @@ def main():
     config.report_every_n_tags = 1  # Report after every tag seen
     config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
-    config.impinj_options = {
-        'SuppressMonza': False, # Important for TID reading on Impinj readers
-    }
 
     # Configure the fields to include in each tag report
     config.tag_content_selector = {
@@ -266,12 +267,6 @@ def main():
         'EnableLastSeenTimestamp': True,
         'EnableTagSeenCount': True,
         'EnableAccessSpecID': True,
-        # Enable TID memory bank reading
-        'EnableC1G2PC': True,
-        'EnableCRC': False,
-        'EnableXPC': False,
-        'EnableTID': True,
-        'EnableUserMemory': False,
     }
 
     # Connect and bind callbacks
@@ -280,10 +275,48 @@ def main():
     READER.add_event_callback(connection_event_cb)
     READER.connect()
 
-    # Additional TID configuration for some readers
-    if hasattr(READER.llrp, 'enableImpinjExtensions'):
-        READER.llrp.enableImpinjExtensions(True)
-        READER.llrp.enableAccessReport(True)
+    def enable_tid_reading(reader_client):
+        # Construct the AccessSpec message manually
+        access_spec = {
+            'AccessSpecID': 123,  # Arbitrary unique ID
+            'AntennaID': 0,  # 0 means any antenna
+            'ProtocolID': 1,  # EPCGlobalClass1Gen2
+            'CurrentState': 'Disabled',
+            'ROSpecID': 0,
+            'AccessCommand': {
+                'TagSpec': {
+                    'MatchType': 1,  # Match all
+                    'MB': 1,  # Match EPC memory bank
+                    'Pointer': 32,
+                    'TagMask': b'',
+                    'TagData': b'',
+                },
+                'AccessCommandOpSpecList': [{
+                    'OpSpecID': 1,
+                    'OpSpec': {
+                        'C1G2Read': {
+                            'MB': 2,  # Memory Bank 2 = TID
+                            'WordPointer': 0,
+                            'WordCount': 6,  # Read 6 words = 12 bytes
+                            'AccessPassword': 0,
+                        }
+                    }
+                }],
+            },
+            'AccessSpecStopTrigger': {
+                'AccessSpecStopTrigger': 1,
+                'OperationCountValue': 0,
+            },
+            'AccessReportSpec': {
+                'AccessReportTrigger': 1,  # Report on success
+            },
+        }
+
+        msg = LLRPMessageDict.to_type('ADD_ACCESS_SPEC', access_spec)
+        reader_client.transact(msg, timeout=2)
+        logging.info("AccessSpec to read TID added.")
+
+    enable_tid_reading(READER.llrp)
 
     time.sleep(2)
 
