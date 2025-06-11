@@ -284,10 +284,7 @@ def main():
             'ProtocolID': 1,
             'CurrentState': False,
             'ROSpecID': 0,
-            'AccessSpecStopTrigger': {
-                'AccessSpecStopTrigger': 1,
-                'OperationCountValue': 0,
-            },
+            'AccessSpecStopTrigger': [1, 0],
             'AccessCommand': {
                 'TagSpec': {
                     'MatchType': 1,
