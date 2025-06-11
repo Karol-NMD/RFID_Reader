@@ -18,8 +18,6 @@ from sllurp.llrp import (
     LLRPReaderState,
 )
 
-from sllurp.llrp_proto import LLRPMessageDict
-
 # -------- RFID CONFIGURATION -------- #
 PORT = LLRP_DEFAULT_PORT
 
@@ -275,13 +273,13 @@ def main():
     READER.add_event_callback(connection_event_cb)
     READER.connect()
 
-    def enable_tid_reading(reader_client):
+    def enable_tid_reading(reader_llrp):
         # Construct the AccessSpec message manually
         access_spec = {
             'AccessSpecID': 123,  # Arbitrary unique ID
             'AntennaID': 0,  # 0 means any antenna
             'ProtocolID': 1,  # EPCGlobalClass1Gen2
-            'CurrentState': 'Disabled',
+            'CurrentState': False,
             'ROSpecID': 0,
             'AccessCommand': {
                 'TagSpec': {
@@ -312,8 +310,8 @@ def main():
             },
         }
 
-        msg = LLRPMessageDict.to_type('ADD_ACCESS_SPEC', access_spec)
-        reader_client.transact(msg, timeout=2)
+        reader_llrp.send_ADD_ACCESSSPEC(access_spec)
+        reader_llrp.send_ENABLE_ACCESSSPEC({'AccessSpecID': 123})
         logging.info("AccessSpec to read TID added.")
 
     enable_tid_reading(READER.llrp)
