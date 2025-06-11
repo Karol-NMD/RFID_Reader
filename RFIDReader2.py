@@ -279,15 +279,17 @@ def main():
             logging.info("AccessSpec added response: %s", msg)
 
         access_spec = {
-            'AccessSpecID': 123,  # Arbitrary unique ID
-            'AntennaID': 0,  # 0 means any antenna
-            'ProtocolID': 1,  # EPCGlobalClass1Gen2
+            'AccessSpecID': 123,
+            'AntennaID': 0,
+            'ProtocolID': 1,
             'CurrentState': False,
             'ROSpecID': 0,
+            'AccessSpecStopTrigger': 1,
+            'OperationCountValue': 0,
             'AccessCommand': {
                 'TagSpec': {
-                    'MatchType': 1,  # Match all
-                    'MB': 1,  # Match EPC memory bank
+                    'MatchType': 1,
+                    'MB': 1,
                     'Pointer': 32,
                     'TagMask': b'',
                     'TagData': b'',
@@ -296,20 +298,16 @@ def main():
                     'OpSpecID': 1,
                     'OpSpec': {
                         'C1G2Read': {
-                            'MB': 2,  # Memory Bank 2 = TID
+                            'MB': 2,  # TID memory bank
                             'WordPointer': 0,
-                            'WordCount': 6,  # Read 6 words = 12 bytes
+                            'WordCount': 6,
                             'AccessPassword': 0,
                         }
                     }
                 }],
             },
-            'AccessSpecStopTrigger': {
-                'AccessSpecStopTrigger': 1,
-                'OperationCountValue': 0,
-            },
             'AccessReportSpec': {
-                'AccessReportTrigger': 1,  # Report on success
+                'AccessReportTrigger': 1,
             },
         }
 
