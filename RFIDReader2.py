@@ -273,10 +273,15 @@ def main():
     READER.add_event_callback(connection_event_cb)
     READER.connect()
 
-    def enable_tid_reading(reader_llrp):
+    def enable_tid_reading(reader_llrp, stopAfterCount=0):
         # Construct the AccessSpec message manually
         def on_access_spec_added(msg):
             logging.info("AccessSpec added response: %s", msg)
+
+        accessStopParam = {
+            'AccessSpecStopTriggerType': 1 if stopAfterCount > 0 else 0,
+            'OperationCountValue': stopAfterCount,
+        }
 
         access_spec = {
             'AccessSpecID': 123,
@@ -284,7 +289,7 @@ def main():
             'ProtocolID': 1,
             'CurrentState': False,
             'ROSpecID': 0,
-            'AccessSpecStopTrigger': [1, 0],
+            'AccessSpecStopTrigger': accessStopParam,
             'AccessCommand': {
                 'TagSpec': {
                     'MatchType': 1,
