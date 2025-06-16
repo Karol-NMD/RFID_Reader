@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e3e28f-042c-465b-84b2-293fa4a05c73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/REQUESTED" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-2.0.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/REQUESTED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp-0.4.0.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/epc/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/llrp.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/llrp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/llrp_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/llrp_decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/llrp_proto.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/llrp_proto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/lock.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/lock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/access.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/access.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/inventory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/sllurp/verb/reset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/sllurp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/sllurp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RFIDReaderDowngradeLibrary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RFIDReaderDowngradeLibrary.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/RFIDReaderDowngradeLibrary.exe" beforeDir="false" />
-    </list>
+    <list default="true" id="a7e3e28f-042c-465b-84b2-293fa4a05c73" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
