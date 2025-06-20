@@ -277,6 +277,12 @@ def main():
     config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
 
+    # Try to enable TID reading through configuration
+    try:
+        config.enable_tid = True  # Some versions support this
+    except:
+        pass
+
     # Configure the fields to include in each tag report
     config.tag_content_selector = {
         'EnableROSpecID': False,
