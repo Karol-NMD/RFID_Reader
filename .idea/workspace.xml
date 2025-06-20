@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e3e28f-042c-465b-84b2-293fa4a05c73" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/RFIDReader2.py" beforeDir="false" afterPath="$PROJECT_DIR$/RFIDReader2.py" afterDir="false" />
-    </list>
+    <list default="true" id="a7e3e28f-042c-465b-84b2-293fa4a05c73" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
