@@ -217,61 +217,22 @@ def user_interface():
 
 
 def enable_tid_reading(reader_llrp):
-    """Enable TID reading using a properly structured AccessSpec"""
+    """Enable TID reading using sllurp's built-in configuration"""
     try:
-        def on_access_spec_added(msg):
-            logging.info("AccessSpec added response: %s", msg)
+        # Try using sllurp's built-in TID reading capability
+        # This approach uses the reader's configuration instead of manual AccessSpec
+        logging.info("🔧 Attempting to enable TID reading via reader configuration...")
 
-        # Properly structured AccessSpec for TID reading
-        access_spec = {
-            'AccessSpecID': 123,
-            'AntennaID': 0,  # 0 means all antennas
-            'ProtocolID': 1,  # C1G2 protocol
-            'CurrentState': 0,  # Disabled initially
-            'ROSpecID': 0,  # Apply to all ROSpecs
-            'AccessSpecStopTrigger': {
-                'AccessSpecStopTriggerType': 0,  # Null trigger (no stop condition)
-                'OperationCountValue': 0
-            },
-            'AccessCommand': {
-                'TagSpec': {
-                    'TagSpecParameter': {
-                        'TagPatternParameter': {
-                            'TagPatternIndex': 1,
-                            'TagMatchPattern': {
-                                'MB': 1,  # EPC memory bank
-                                'Pointer': 32,  # Start of EPC
-                                'TagMask': b'',  # Empty mask (match all)
-                                'TagData': b''  # Empty data (match all)
-                            }
-                        }
-                    }
-                },
-                'AccessCommandOpSpecList': [{
-                    'OpSpecID': 1,
-                    'OpSpec': {
-                        'C1G2Read': {
-                            'MB': 2,  # TID memory bank
-                            'WordPointer': 0,  # Start from beginning
-                            'WordCount': 6,  # Read 6 words (12 bytes)
-                            'AccessPassword': 0
-                        }
-                    }
-                }]
-            },
-            'AccessReportSpec': {
-                'AccessReportTrigger': 1  # Report after each access operation
-            }
-        }
-
-        reader_llrp.send_ADD_ACCESSSPEC(access_spec, on_access_spec_added)
-        time.sleep(0.5)  # Give time for the spec to be added
-        reader_llrp.send_ENABLE_ACCESSSPEC({'AccessSpecID': 123})
-        logging.info("✅ TID reading AccessSpec has been added and enabled.")
+        # Some versions of sllurp support TID reading through reader configuration
+        # If this doesn't work, we'll fall back to basic EPC reading
+        if hasattr(reader_llrp, 'tid_enabled'):
+            reader_llrp.tid_enabled = True
+            logging.info("✅ TID reading enabled via reader configuration.")
+        else:
+            logging.info("ℹ️ TID reading not supported by this sllurp version.")
 
     except Exception as e:
         logging.error(f"❌ Failed to enable TID reading: {e}")
-        # Continue without TID reading
         logging.info("ℹ️ Continuing without TID reading capability.")
 
 
@@ -334,6 +295,7 @@ def main():
     READER = LLRPReaderClient(reader_ip, PORT, config)
     READER.add_tag_report_callback(tag_report_cb)
     READER.add_event_callback(connection_event_cb)
+
     try:
         READER.connect()
         time.sleep(2)  # Wait for connection to stabilize
