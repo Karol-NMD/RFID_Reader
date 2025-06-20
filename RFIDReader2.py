@@ -107,13 +107,17 @@ def tag_report_cb(_reader, tag_reports):
 
             tid_value = None  # The need of a program to fetch this TID
 
-            op_spec_result = tag.get("AccessCommandOpSpecResult")
-            if op_spec_result and "C1G2ReadOpSpecResult" in op_spec_result:
-                try:
-                    tid_bytes = op_spec_result["C1G2ReadOpSpecResult"]["ReadData"]
-                    tid_value = tid_bytes.hex().upper()
-                except Exception as e:
-                    logging.warning(f"Failed to parse TID: {e}")
+            # Check for TID data in access command results
+            if "AccessCommandOpSpecResult" in tag:
+                op_spec_result = tag["AccessCommandOpSpecResult"]
+                if isinstance(op_spec_result, list) and len(op_spec_result) > 0:
+                    first_result = op_spec_result[0]
+                    if "C1G2ReadOpSpecResult" in first_result:
+                        try:
+                            tid_bytes = first_result["C1G2ReadOpSpecResult"]["ReadData"]
+                            tid_value = tid_bytes.hex().upper()
+                        except Exception as e:
+                            logging.warning(f"Failed to parse TID: {e}")
 
             tag_data = {
                 "epc_hex": epc_hex,
@@ -212,6 +216,65 @@ def user_interface():
             print("❓ Unknown command.")
 
 
+def enable_tid_reading(reader_llrp):
+    """Enable TID reading using a properly structured AccessSpec"""
+    try:
+        def on_access_spec_added(msg):
+            logging.info("AccessSpec added response: %s", msg)
+
+        # Properly structured AccessSpec for TID reading
+        access_spec = {
+            'AccessSpecID': 123,
+            'AntennaID': 0,  # 0 means all antennas
+            'ProtocolID': 1,  # C1G2 protocol
+            'CurrentState': 0,  # Disabled initially
+            'ROSpecID': 0,  # Apply to all ROSpecs
+            'AccessSpecStopTrigger': {
+                'AccessSpecStopTriggerType': 0,  # Null trigger (no stop condition)
+                'OperationCountValue': 0
+            },
+            'AccessCommand': {
+                'TagSpec': {
+                    'TagSpecParameter': {
+                        'TagPatternParameter': {
+                            'TagPatternIndex': 1,
+                            'TagMatchPattern': {
+                                'MB': 1,  # EPC memory bank
+                                'Pointer': 32,  # Start of EPC
+                                'TagMask': b'',  # Empty mask (match all)
+                                'TagData': b''  # Empty data (match all)
+                            }
+                        }
+                    }
+                },
+                'AccessCommandOpSpecList': [{
+                    'OpSpecID': 1,
+                    'OpSpec': {
+                        'C1G2Read': {
+                            'MB': 2,  # TID memory bank
+                            'WordPointer': 0,  # Start from beginning
+                            'WordCount': 6,  # Read 6 words (12 bytes)
+                            'AccessPassword': 0
+                        }
+                    }
+                }]
+            },
+            'AccessReportSpec': {
+                'AccessReportTrigger': 1  # Report after each access operation
+            }
+        }
+
+        reader_llrp.send_ADD_ACCESSSPEC(access_spec, on_access_spec_added)
+        time.sleep(0.5)  # Give time for the spec to be added
+        reader_llrp.send_ENABLE_ACCESSSPEC({'AccessSpecID': 123})
+        logging.info("✅ TID reading AccessSpec has been added and enabled.")
+
+    except Exception as e:
+        logging.error(f"❌ Failed to enable TID reading: {e}")
+        # Continue without TID reading
+        logging.info("ℹ️ Continuing without TID reading capability.")
+
+
 # -------- MAIN -------- #
 def main():
     global READER
@@ -245,7 +308,7 @@ def main():
 
     # Create configuration with frequent reporting
     config = LLRPReaderConfig()
-    config.reset_on_connect = False
+    config.reset_on_connect = True
     config.start_inventory = False
     config.tx_power = {1: 0, 2: 0}
     config.antennas = [1, 2]
@@ -271,61 +334,26 @@ def main():
     READER = LLRPReaderClient(reader_ip, PORT, config)
     READER.add_tag_report_callback(tag_report_cb)
     READER.add_event_callback(connection_event_cb)
-    READER.connect()
+    try:
+        READER.connect()
+        time.sleep(2)  # Wait for connection to stabilize
 
-    def enable_tid_reading(reader_llrp, stopAfterCount=0):
-        # Construct the AccessSpec message manually
-        def on_access_spec_added(msg):
-            logging.info("AccessSpec added response: %s", msg)
+        # Enable TID reading
+        enable_tid_reading(READER.llrp)
+        time.sleep(1)  # Wait for AccessSpec to be configured
 
-        access_spec = {
-            'AccessSpecID': 123,
-            'AntennaID': 0,
-            'ProtocolID': 1,
-            'CurrentState': False,
-            'ROSpecID': 0,
-            'AccessSpecStopTrigger': 1,
-            'AccessCommand': {
-                'TagSpec': {
-                    'MatchType': 1,
-                    'MB': 1,
-                    'Pointer': 32,
-                    'TagMask': b'',
-                    'TagData': b'',
-                },
-                'AccessCommandOpSpecList': [{
-                    'OpSpecID': 1,
-                    'OpSpec': {
-                        'C1G2Read': {
-                            'MB': 2,  # ✔️ TID memory bank
-                            'WordPointer': 0,
-                            'WordCount': 6,
-                            'AccessPassword': 0,
-                        }
-                    }
-                }],
-            },
-            'AccessReportSpec': {
-                'AccessReportTrigger': 1,
-            },
-        }
+        print("✅ Reader connected and TID reading configured. Ready for commands.")
 
-        reader_llrp.send_ADD_ACCESSSPEC(access_spec, on_access_spec_added)
-        reader_llrp.send_ENABLE_ACCESSSPEC({'AccessSpecID': 123})
-        logging.info("AccessSpec to read TID has been added and enabled.")
+        # Launch tag processing thread
+        tag_thread = threading.Thread(target=process_tags_console, daemon=True)
+        tag_thread.start()
 
-    enable_tid_reading(READER.llrp)
+        # Start user loop
+        user_interface()
 
-    time.sleep(2)
-
-    print("✅ Reader connected. Ready for commands.")
-
-    # Launch tag processing thread
-    tag_thread = threading.Thread(target=process_tags_console, daemon=True)
-    tag_thread.start()
-
-    # Start user loop
-    user_interface()
+    except Exception as e:
+        print(f"❌ Connection failed: {e}")
+        return
 
     # Graceful shutdown
     if READER and READER.is_alive():
