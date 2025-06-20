@@ -278,18 +278,13 @@ def main():
         def on_access_spec_added(msg):
             logging.info("AccessSpec added response: %s", msg)
 
-        accessStopParam = {
-            'AccessSpecStopTriggerType': 1 if stopAfterCount > 0 else 0,
-            'OperationCountValue': stopAfterCount,
-        }
-
         access_spec = {
             'AccessSpecID': 123,
             'AntennaID': 0,
             'ProtocolID': 1,
             'CurrentState': False,
             'ROSpecID': 0,
-            'AccessSpecStopTrigger': accessStopParam,
+            'AccessSpecStopTrigger': 1,
             'AccessCommand': {
                 'TagSpec': {
                     'MatchType': 1,
