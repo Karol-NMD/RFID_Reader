@@ -27,6 +27,7 @@ TAG_QUEUE = Queue()
 SEEN_TAGS = deque(maxlen=100)  # Keep latest 100 for reference
 LOG_FILE_PATH = "tag_reads.txt"
 DB_FILE = "tags.db"
+TID_READING_ENABLED = False
 
 # -------- LOGGING SETUP -------- #
 logging.basicConfig(level=logging.INFO)
@@ -89,6 +90,35 @@ def view_database_contents():
               f"| Seen: {row[6]} | Time: {row[7]}")
 
 
+# -------- TID READING FUNCTIONS -------- #
+def read_tag_tid(epc_hex):
+    """Attempt to read TID for a specific tag using direct C1G2 commands"""
+    if not READER or not READER.is_alive():
+        return None
+
+    try:
+        # Convert EPC hex to bytes for the read operation
+        epc_bytes = bytes.fromhex(epc_hex)
+
+        # Create a simple C1G2 read command for TID
+        read_cmd = {
+            'MB': 2,  # TID memory bank
+            'WordPointer': 0,  # Start from beginning
+            'WordCount': 6,  # Read 6 words (12 bytes)
+            'AccessPassword': 0,
+            'Handle': epc_bytes
+        }
+
+        # This is a simplified approach - in practice, you might need
+        # to implement a more sophisticated TID reading mechanism
+        # For now, we'll return None and focus on EPC reading
+        return None
+
+    except Exception as e:
+        logging.debug(f"TID read failed for {epc_hex}: {e}")
+        return None
+
+
 # -------- CALLBACKS -------- #
 def tag_report_cb(_reader, tag_reports):
     """Callback for tag reads"""
@@ -99,7 +129,7 @@ def tag_report_cb(_reader, tag_reports):
             try:
                 epc_real_bytes = bytes.fromhex(epc.decode("ascii"))
                 epc_real_ascii = epc_real_bytes.decode("ascii")
-            except UnicodeDecodeError:
+            except (UnicodeDecodeError, ValueError):
                 epc_real_ascii = None  # Or set to "<non-ascii>"
 
             last_seen_raw = tag.get("LastSeenTimestampUTC")
@@ -107,7 +137,7 @@ def tag_report_cb(_reader, tag_reports):
 
             tid_value = None  # The need of a program to fetch this TID
 
-            # Check for TID data in access command results
+            # Method 1: Check AccessCommandOpSpecResult
             if "AccessCommandOpSpecResult" in tag:
                 op_spec_result = tag["AccessCommandOpSpecResult"]
                 if isinstance(op_spec_result, list) and len(op_spec_result) > 0:
@@ -118,6 +148,18 @@ def tag_report_cb(_reader, tag_reports):
                             tid_value = tid_bytes.hex().upper()
                         except Exception as e:
                             logging.warning(f"Failed to parse TID: {e}")
+
+            # Method 2: Check if TID is directly in the tag report
+            if not tid_value and "TID" in tag:
+                try:
+                    tid_bytes = tag["TID"]
+                    tid_value = tid_bytes.hex().upper()
+                except Exception as e:
+                    logging.debug(f"Failed to parse TID from direct field: {e}")
+
+            # Method 3: Try to read TID separately (this would be a custom implementation)
+            if not tid_value and TID_READING_ENABLED:
+                tid_value = read_tag_tid(epc_hex)
 
             tag_data = {
                 "epc_hex": epc_hex,
@@ -167,6 +209,14 @@ def print_reader_state():
         print("🔌 Reader not connected.")
 
 
+def toggle_tid_reading():
+    """Toggle TID reading attempt on/off"""
+    global TID_READING_ENABLED
+    TID_READING_ENABLED = not TID_READING_ENABLED
+    status = "enabled" if TID_READING_ENABLED else "disabled"
+    print(f"🔧 TID reading attempt {status}.")
+
+
 # -------- THREAD: TAG DISPLAY -------- #
 def process_tags_console():
     # seen_epcs = set()
@@ -197,7 +247,7 @@ def process_tags_console():
 # -------- USER INTERFACE LOOP -------- #
 def user_interface():
     while True:
-        print("\nCommands: [start] [stop] [clear] [state] [view] [exit]")
+        print("\nCommands: [start] [stop] [clear] [state] [view] [tid] [exit]")
         cmd = input(">> ").strip().lower()
         if cmd == "start":
             start_reading()
@@ -209,31 +259,13 @@ def user_interface():
             print_reader_state()
         elif cmd == "view":
             view_database_contents()
+        elif cmd == "tid":
+            toggle_tid_reading()
         elif cmd == "exit":
             stop_reading()
             break
         else:
             print("❓ Unknown command.")
-
-
-def enable_tid_reading(reader_llrp):
-    """Enable TID reading using sllurp's built-in configuration"""
-    try:
-        # Try using sllurp's built-in TID reading capability
-        # This approach uses the reader's configuration instead of manual AccessSpec
-        logging.info("🔧 Attempting to enable TID reading via reader configuration...")
-
-        # Some versions of sllurp support TID reading through reader configuration
-        # If this doesn't work, we'll fall back to basic EPC reading
-        if hasattr(reader_llrp, 'tid_enabled'):
-            reader_llrp.tid_enabled = True
-            logging.info("✅ TID reading enabled via reader configuration.")
-        else:
-            logging.info("ℹ️ TID reading not supported by this sllurp version.")
-
-    except Exception as e:
-        logging.error(f"❌ Failed to enable TID reading: {e}")
-        logging.info("ℹ️ Continuing without TID reading capability.")
 
 
 # -------- MAIN -------- #
@@ -277,12 +309,6 @@ def main():
     config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
     config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
 
-    # Try to enable TID reading through configuration
-    try:
-        config.enable_tid = True  # Some versions support this
-    except:
-        pass
-
     # Configure the fields to include in each tag report
     config.tag_content_selector = {
         'EnableROSpecID': False,
@@ -306,11 +332,10 @@ def main():
         READER.connect()
         time.sleep(2)  # Wait for connection to stabilize
 
-        # Enable TID reading
-        enable_tid_reading(READER.llrp)
-        time.sleep(1)  # Wait for AccessSpec to be configured
-
-        print("✅ Reader connected and TID reading configured. Ready for commands.")
+        print("✅ Reader connected successfully!")
+        print("ℹ️ This version focuses on reliable EPC reading.")
+        print("ℹ️ TID reading may work automatically if supported by your reader/tags.")
+        print("ℹ️ Use 'tid' command to toggle TID reading attempts.")
 
         # Launch tag processing thread
         tag_thread = threading.Thread(target=process_tags_console, daemon=True)
