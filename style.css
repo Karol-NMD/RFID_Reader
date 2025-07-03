@@ -1,0 +1,407 @@
+// Tag Reads
+color: #0D141C;
+ font-size: 32px;
+ font-family: Inter;
+ font-weight: 700;
+ line-height: 40px;
+ word-wrap: break-word
+---
+// View and manage RFID tag read data
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Search  tag ID
+color: #4A739C;
+ font-size: 16px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 24px;
+ word-wrap: break-word
+---
+// Location
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Date
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Tag ID
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Timestamp
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Location
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// A1B2C3D4E5F6
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 10:30:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse A
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 1
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// F1E2D3C4B5A6
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 10:35:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse B
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 2
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// B2C3D4E5F6A1
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 10:40:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse A
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 1
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// C3D4E5F6A1B2
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 10:45:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse C
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 3
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// D4E5F6A1B2C3
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 10:50:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse B
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 2
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// E5F6A1B2C3D4
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 10:55:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse A
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 1
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// F6A1B2C3D4E5
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 11:00:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse C
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 3
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// A1B2C3D4E5F6
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 11:05:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse B
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 2
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// B2C3D4E5F6A1
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 11:10:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse A
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 1
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// C3D4E5F6A1B2
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// 2024-01-15 11:15:00
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Warehouse C
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Reader 3
+color: #4A739C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 21px;
+ word-wrap: break-word
+---
+// Export Data
+color: #0D141C;
+ font-size: 14px;
+ font-family: Inter;
+ font-weight: 700;
+ line-height: 21px;
+ word-wrap: break-word

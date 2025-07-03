@@ -27,7 +27,6 @@ TAG_QUEUE = Queue()
 SEEN_TAGS = deque(maxlen=100)  # Keep latest 100 for reference
 LOG_FILE_PATH = "tag_reads.txt"
 DB_FILE = "tags.db"
-TID_READING_ENABLED = False
 
 # -------- LOGGING SETUP -------- #
 logging.basicConfig(level=logging.INFO)
