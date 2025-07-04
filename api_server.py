@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from rfid_script import TAG_QUEUE, view_database_contents  # import from your existing script
+from RFIDReader2 import TAG_QUEUE, view_database_contents  # import from your existing script
 from queue import Empty
 import threading
 
