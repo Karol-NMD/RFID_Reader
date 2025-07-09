@@ -1,0 +1,5 @@
+sllurp~=2.0.1
+paramiko~=3.5.1
+fastapi~=0.115.14
+PyQt5~=5.15.11
+pyqtgraph~=0.13.3
