@@ -24,7 +24,6 @@ PORT = LLRP_DEFAULT_PORT
 # -------- GLOBALS -------- #
 READER: Optional[LLRPReaderClient] = None
 TAG_QUEUE = Queue()
-SEEN_TAGS = deque(maxlen=100)  # Keep latest 100 for reference
 LOG_FILE_PATH = "tag_reads.txt"
 DB_FILE = "tags.db"
 
@@ -44,10 +43,9 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             epc_hex TEXT NOT NULL,
             epc_ascii TEXT,
-            tid TEXT,
-            antenna INTEGER,
-            channel INTEGER,
-            seen_count INTEGER,
+            antenna TEXT,
+            channel TEXT,
+            seen_count TEXT,
             last_seen TEXT
         )
     ''')
@@ -59,15 +57,14 @@ def save_tag_to_db(tag_data):
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
     c.execute('''
-        INSERT INTO tag_reads (epc_hex, epc_ascii, tid, antenna, channel, seen_count, last_seen)
+        INSERT INTO tag_reads (epc_hex, epc_ascii, antenna, channel, seen_count, last_seen)
         VALUES (?, ?, ?, ?, ?, ?, ?)
     ''', (
         tag_data["epc_hex"],
         tag_data["epc_ascii"],
-        tag_data["tid"],
-        tag_data["antenna"],
-        tag_data["channel"],
-        tag_data["seen_count"],
+        str(tag_data["antenna"]),
+        str(tag_data["channel"]),
+        str(tag_data["seen_count"]),
         tag_data["last_seen"]
     ))
     conn.commit()
@@ -85,37 +82,8 @@ def view_database_contents():
         return
     print(f"\n📋 All tags in the database:")
     for row in rows:
-        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | TID: {row[3]} | Ant: {row[4]} | Ch: {row[5]} "
+        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | Antenna: {row[4]} | Channel: {row[5]} "
               f"| Seen: {row[6]} | Time: {row[7]}")
-
-
-# -------- TID READING FUNCTIONS -------- #
-def read_tag_tid(epc_hex):
-    """Attempt to read TID for a specific tag using direct C1G2 commands"""
-    if not READER or not READER.is_alive():
-        return None
-
-    try:
-        # Convert EPC hex to bytes for the read operation
-        epc_bytes = bytes.fromhex(epc_hex)
-
-        # Create a simple C1G2 read command for TID
-        read_cmd = {
-            'MB': 2,  # TID memory bank
-            'WordPointer': 0,  # Start from beginning
-            'WordCount': 6,  # Read 6 words (12 bytes)
-            'AccessPassword': 0,
-            'Handle': epc_bytes
-        }
-
-        # This is a simplified approach - in practice, you might need
-        # to implement a more sophisticated TID reading mechanism
-        # For now, we'll return None and focus on EPC reading
-        return None
-
-    except Exception as e:
-        logging.debug(f"TID read failed for {epc_hex}: {e}")
-        return None
 
 
 # -------- CALLBACKS -------- #
@@ -132,42 +100,15 @@ def tag_report_cb(_reader, tag_reports):
                 epc_real_ascii = None  # Or set to "<non-ascii>"
 
             last_seen_raw = tag.get("LastSeenTimestampUTC")
-            last_seen_str = datetime.datetime.utcfromtimestamp(last_seen_raw / 1_000_000).strftime("%Y-%m-%d %H:%M:%S")
-
-            tid_value = None  # The need of a program to fetch this TID
-
-            # Method 1: Check AccessCommandOpSpecResult
-            if "AccessCommandOpSpecResult" in tag:
-                op_spec_result = tag["AccessCommandOpSpecResult"]
-                if isinstance(op_spec_result, list) and len(op_spec_result) > 0:
-                    first_result = op_spec_result[0]
-                    if "C1G2ReadOpSpecResult" in first_result:
-                        try:
-                            tid_bytes = first_result["C1G2ReadOpSpecResult"]["ReadData"]
-                            tid_value = tid_bytes.hex().upper()
-                        except Exception as e:
-                            logging.warning(f"Failed to parse TID: {e}")
-
-            # Method 2: Check if TID is directly in the tag report
-            if not tid_value and "TID" in tag:
-                try:
-                    tid_bytes = tag["TID"]
-                    tid_value = tid_bytes.hex().upper()
-                except Exception as e:
-                    logging.debug(f"Failed to parse TID from direct field: {e}")
-
-            # Method 3: Try to read TID separately (this would be a custom implementation)
-            if not tid_value and TID_READING_ENABLED:
-                tid_value = read_tag_tid(epc_hex)
+            last_seen_str = str(datetime.datetime.utcfromtimestamp(last_seen_raw / 1_000_000).strftime("%Y-%m-%d %H:%M:%S"))
 
             tag_data = {
                 "epc_hex": epc_hex,
                 "epc_ascii": epc_real_ascii,
-                "tid": tid_value,
-                "channel": tag.get("ChannelIndex"),
                 "antenna": tag.get("AntennaID"),
-                "last_seen": last_seen_str,
+                "channel": tag.get("ChannelIndex"),
                 "seen_count": tag.get("TagSeenCount"),
+                "last_seen": last_seen_str
             }
             TAG_QUEUE.put(tag_data)
         except Exception as e:
@@ -184,7 +125,6 @@ def connection_event_cb(_reader, event):
 
 # -------- COMMAND FUNCTIONS -------- #
 def clear_tag_data():
-    # SEEN_TAGS.clear()
     print("🧹 Tag data cleared.")
 
 
@@ -208,33 +148,17 @@ def print_reader_state():
         print("🔌 Reader not connected.")
 
 
-def toggle_tid_reading():
-    """Toggle TID reading attempt on/off"""
-    global TID_READING_ENABLED
-    TID_READING_ENABLED = not TID_READING_ENABLED
-    status = "enabled" if TID_READING_ENABLED else "disabled"
-    print(f"🔧 TID reading attempt {status}.")
-
-
 # -------- THREAD: TAG DISPLAY -------- #
 def process_tags_console():
-    # seen_epcs = set()
     while True:
         try:
-            # tag = TAG_QUEUE.get(timeout=0.2)
             tag = TAG_QUEUE.get()
-            # epc = tag["epc"]
-            # if epc not in seen_epcs:
-            #     seen_epcs.add(epc)
-            # SEEN_TAGS.append(tag)
             print(f"\n📦 New tag:")
-            print(f" - EPC (HEX): {tag['epc_hex']} | EPC (ASCII): {tag['epc_ascii']} | TID: {tag['tid']} | "
-                  f"Antenna: {tag['antenna']} | Ch: {tag['channel']} | Seen: {tag['seen_count']}x | "
-                  f"Time: {tag['last_seen']}")
+            print(f" - EPC (HEX): {tag['epc_hex']} || EPC (ASCII): {tag['epc_ascii']} | Antenna: {tag['antenna']} | "
+                  f"Ch: {tag['channel']} | Seen: {tag['seen_count']}x | Time: {tag['last_seen']}")
             with open(LOG_FILE_PATH, "a") as f:
-                f.write(f"{tag['last_seen']}, EPC: {tag['epc_hex']} || {tag['epc_ascii']}, TID: {tag['tid']},"
-                        f" Antenna: {tag['antenna']},"
-                        f" Channel: {tag['channel']}, SeenCount: {tag['seen_count']}\n")
+                f.write(f"EPC: {tag['epc_hex']} || {tag['epc_ascii']}, Antenna: {tag['antenna']},"
+                        f" Channel: {tag['channel']}, Seen Count: {tag['seen_count']}x, Time: {tag['last_seen']}\n")
             save_tag_to_db(tag)  # Save to SQLite
         except Empty:
             continue
@@ -246,7 +170,7 @@ def process_tags_console():
 # -------- USER INTERFACE LOOP -------- #
 def user_interface():
     while True:
-        print("\nCommands: [start] [stop] [clear] [state] [view] [tid] [exit]")
+        print("\nCommands: [start] [stop] [clear] [state] [view] [exit]")
         cmd = input(">> ").strip().lower()
         if cmd == "start":
             start_reading()
@@ -258,8 +182,6 @@ def user_interface():
             print_reader_state()
         elif cmd == "view":
             view_database_contents()
-        elif cmd == "tid":
-            toggle_tid_reading()
         elif cmd == "exit":
             stop_reading()
             break
@@ -332,9 +254,6 @@ def main():
         time.sleep(2)  # Wait for connection to stabilize
 
         print("✅ Reader connected successfully!")
-        print("ℹ️ This version focuses on reliable EPC reading.")
-        print("ℹ️ TID reading may work automatically if supported by your reader/tags.")
-        print("ℹ️ Use 'tid' command to toggle TID reading attempts.")
 
         # Launch tag processing thread
         tag_thread = threading.Thread(target=process_tags_console, daemon=True)
