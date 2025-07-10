@@ -58,7 +58,7 @@ def save_tag_to_db(tag_data):
     c = conn.cursor()
     c.execute('''
         INSERT INTO tag_reads (epc_hex, epc_ascii, antenna, channel, seen_count, last_seen)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?)
     ''', (
         tag_data["epc_hex"],
         tag_data["epc_ascii"],
@@ -82,8 +82,8 @@ def view_database_contents():
         return
     print(f"\n📋 All tags in the database:")
     for row in rows:
-        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | Antenna: {row[4]} | Channel: {row[5]} "
-              f"| Seen: {row[6]} | Time: {row[7]}")
+        print(f"ID: {row[0]} | EPC_Hex: {row[1]} | EPC_Ascii: {row[2]} | Antenna: {row[3]} | Channel: {row[4]} "
+              f"| Seen: {row[5]} | Time: {row[6]}")
 
 
 # -------- CALLBACKS -------- #
