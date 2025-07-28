@@ -1,0 +1,2942 @@
+(['C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+  'Design\\RFIDScanReader\\RFID Scan Reader\\RFIDReaderDowngradeLibrary.py'],
+ ['C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+  'Design\\RFIDScanReader\\RFID Scan Reader'],
+ [],
+ [('C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks',
+   -1000),
+  ('C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\_pyinstaller_hooks_contrib',
+   -1000)],
+ {},
+ [],
+ [],
+ False,
+ {},
+ 0,
+ [],
+ [],
+ '3.8.0 (tags/v3.8.0:fa919fd, Oct 14 2019, 19:37:50) [MSC v.1916 64 bit '
+ '(AMD64)]',
+ [('pyi_rth_pkgres',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('RFIDReaderDowngradeLibrary',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan Reader\\RFIDReaderDowngradeLibrary.py',
+   'PYSOURCE')],
+ [('_distutils_hack',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\_distutils_hack\\__init__.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('contextlib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\metadata.py',
+   'PYMODULE'),
+  ('configparser',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\configparser.py',
+   'PYMODULE'),
+  ('zipfile',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('argparse',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\argparse.py',
+   'PYMODULE'),
+  ('textwrap',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\textwrap.py',
+   'PYMODULE'),
+  ('copy',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\copy.py',
+   'PYMODULE'),
+  ('gettext',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\gettext.py',
+   'PYMODULE'),
+  ('py_compile',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('lzma',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\lzma.py',
+   'PYMODULE'),
+  ('_compression',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_compression.py',
+   'PYMODULE'),
+  ('bz2',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\bz2.py',
+   'PYMODULE'),
+  ('_strptime',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('datetime',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\datetime.py',
+   'PYMODULE'),
+  ('calendar',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\calendar.py',
+   'PYMODULE'),
+  ('threading',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\threading.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('struct',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\struct.py',
+   'PYMODULE'),
+  ('shutil',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\shutil.py',
+   'PYMODULE'),
+  ('tarfile',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('gzip',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\gzip.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\fnmatch.py',
+   'PYMODULE'),
+  ('pathlib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pathlib.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('email',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email.parser',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.utils',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\utils.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('socket',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\socket.py',
+   'PYMODULE'),
+  ('selectors',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\selectors.py',
+   'PYMODULE'),
+  ('random',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\random.py',
+   'PYMODULE'),
+  ('hashlib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('logging',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('pickle',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pprint',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pprint.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('string',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\string.py',
+   'PYMODULE'),
+  ('bisect',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\bisect.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.message',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.policy',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.generator',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('base64',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\base64.py',
+   'PYMODULE'),
+  ('getopt',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\getopt.py',
+   'PYMODULE'),
+  ('quopri',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\quopri.py',
+   'PYMODULE'),
+  ('uu',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\uu.py',
+   'PYMODULE'),
+  ('optparse',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\optparse.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email.header',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\email\\errors.py',
+   'PYMODULE'),
+  ('csv',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\csv.py',
+   'PYMODULE'),
+  ('tokenize',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\tokenize.py',
+   'PYMODULE'),
+  ('token',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\token.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('setuptools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.versionpredicate',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
+   'PYMODULE'),
+  ('setuptools._distutils.version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\version.py',
+   'PYMODULE'),
+  ('setuptools._distutils.util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\util.py',
+   'PYMODULE'),
+  ('tempfile',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\tempfile.py',
+   'PYMODULE'),
+  ('distutils.sysconfig',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('distutils.text_file',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\text_file.py',
+   'PYMODULE'),
+  ('_osx_support',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_osx_support.py',
+   'PYMODULE'),
+  ('distutils',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\__init__.py',
+   'PYMODULE'),
+  ('distutils.archive_util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\archive_util.py',
+   'PYMODULE'),
+  ('distutils.dir_util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\dir_util.py',
+   'PYMODULE'),
+  ('distutils.file_util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\file_util.py',
+   'PYMODULE'),
+  ('distutils.dep_util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\dep_util.py',
+   'PYMODULE'),
+  ('distutils.spawn',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\spawn.py',
+   'PYMODULE'),
+  ('distutils.debug',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\debug.py',
+   'PYMODULE'),
+  ('distutils.log',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\log.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sysconfig.py',
+   'PYMODULE'),
+  ('subprocess',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('signal',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\signal.py',
+   'PYMODULE'),
+  ('setuptools._distutils.unixccompiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\unixccompiler.py',
+   'PYMODULE'),
+  ('shlex',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\shlex.py',
+   'PYMODULE'),
+  ('setuptools._distutils.text_file',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\text_file.py',
+   'PYMODULE'),
+  ('setuptools._distutils.sysconfig',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('setuptools._distutils.spawn',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\spawn.py',
+   'PYMODULE'),
+  ('setuptools._distutils.py39compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\py39compat.py',
+   'PYMODULE'),
+  ('platform',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\platform.py',
+   'PYMODULE'),
+  ('setuptools._distutils.py38compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\py38compat.py',
+   'PYMODULE'),
+  ('setuptools._distutils.msvccompiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\msvccompiler.py',
+   'PYMODULE'),
+  ('distutils.msvc9compiler',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\msvc9compiler.py',
+   'PYMODULE'),
+  ('distutils.ccompiler',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('distutils.fancy_getopt',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\fancy_getopt.py',
+   'PYMODULE'),
+  ('setuptools._distutils.msvc9compiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\msvc9compiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.log',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\log.py',
+   'PYMODULE'),
+  ('setuptools._distutils.filelist',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\filelist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.file_util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\file_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.fancy_getopt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\fancy_getopt.py',
+   'PYMODULE'),
+  ('setuptools._distutils.extension',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\extension.py',
+   'PYMODULE'),
+  ('setuptools._distutils.errors',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\errors.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dist',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\dist.py',
+   'PYMODULE'),
+  ('distutils.versionpredicate',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\versionpredicate.py',
+   'PYMODULE'),
+  ('distutils.version',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\version.py',
+   'PYMODULE'),
+  ('distutils.command',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\command\\__init__.py',
+   'PYMODULE'),
+  ('distutils.cmd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\cmd.py',
+   'PYMODULE'),
+  ('distutils.dist',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\dist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dir_util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\dir_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dep_util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\dep_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.debug',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\debug.py',
+   'PYMODULE'),
+  ('setuptools._distutils.cygwinccompiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\cygwinccompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.core',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\core.py',
+   'PYMODULE'),
+  ('setuptools._distutils.config',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\config.py',
+   'PYMODULE'),
+  ('cgi',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\cgi.py',
+   'PYMODULE'),
+  ('html',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\html\\__init__.py',
+   'PYMODULE'),
+  ('html.entities',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\html\\entities.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.upload',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\upload.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('getpass',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\getpass.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\nturl2path.py',
+   'PYMODULE'),
+  ('ftplib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ftplib.py',
+   'PYMODULE'),
+  ('netrc',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\netrc.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\mimetypes.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('ssl',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ssl.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('http.client',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\http\\client.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.sdist',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
+   'PYMODULE'),
+  ('glob',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\glob.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.register',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\register.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.py37compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\py37compat.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.install_scripts',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\install_scripts.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.install_lib',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\install_lib.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.install_headers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\install_headers.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.install_egg_info',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\install_egg_info.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.install_data',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\install_data.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.install',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\install.py',
+   'PYMODULE'),
+  ('site',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site.py',
+   'PYMODULE'),
+  ('rlcompleter',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\rlcompleter.py',
+   'PYMODULE'),
+  ('_sitebuiltins',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_sitebuiltins.py',
+   'PYMODULE'),
+  ('pydoc',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pydoc.py',
+   'PYMODULE'),
+  ('webbrowser',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\webbrowser.py',
+   'PYMODULE'),
+  ('http.server',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\http\\server.py',
+   'PYMODULE'),
+  ('socketserver',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\socketserver.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('pydoc_data',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('tty',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\tty.py',
+   'PYMODULE'),
+  ('pkgutil',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pkgutil.py',
+   'PYMODULE'),
+  ('zipimport',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\zipimport.py',
+   'PYMODULE'),
+  ('inspect',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\inspect.py',
+   'PYMODULE'),
+  ('ast',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ast.py',
+   'PYMODULE'),
+  ('dis',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\dis.py',
+   'PYMODULE'),
+  ('opcode',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\opcode.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.config',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\config.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.clean',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\clean.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.check',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\check.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build_scripts',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\build_scripts.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build_py',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\build_py.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build_ext',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
+   'PYMODULE'),
+  ('concurrent.futures',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\concurrent\\futures\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures.thread',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\concurrent\\futures\\thread.py',
+   'PYMODULE'),
+  ('queue',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\queue.py',
+   'PYMODULE'),
+  ('concurrent.futures.process',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\concurrent\\futures\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\queues.py',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\synchronize.py',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\heap.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_tracker',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\resource_tracker.py',
+   'PYMODULE'),
+  ('multiprocessing.spawn',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\spawn.py',
+   'PYMODULE'),
+  ('runpy',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\runpy.py',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\util.py',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\context.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\popen_spawn_win32.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\popen_forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\popen_spawn_posix.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_fork',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\popen_fork.py',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\sharedctypes.py',
+   'PYMODULE'),
+  ('ctypes',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\pool.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\dummy\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\dummy\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\managers.py',
+   'PYMODULE'),
+  ('multiprocessing.shared_memory',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\shared_memory.py',
+   'PYMODULE'),
+  ('secrets',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\secrets.py',
+   'PYMODULE'),
+  ('hmac',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\hmac.py',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\reduction.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\resource_sharer.py',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\connection.py',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xmlrpc\\client.py',
+   'PYMODULE'),
+  ('xmlrpc',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\parsers\\expat.py',
+   'PYMODULE'),
+  ('xml.parsers',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\parsers\\__init__.py',
+   'PYMODULE'),
+  ('xml',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\sax\\expatreader.py',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\sax\\saxutils.py',
+   'PYMODULE'),
+  ('xml.sax',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\sax\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\sax\\handler.py',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\sax\\_exceptions.py',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\xml\\sax\\xmlreader.py',
+   'PYMODULE'),
+  ('decimal',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('contextvars',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\contextvars.py',
+   'PYMODULE'),
+  ('numbers',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\numbers.py',
+   'PYMODULE'),
+  ('multiprocessing',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\multiprocessing\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures._base',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\concurrent\\futures\\_base.py',
+   'PYMODULE'),
+  ('concurrent',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\concurrent\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build_clib',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\build_clib.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.bdist_rpm',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\bdist_rpm.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.bdist_dumb',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\bdist_dumb.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.bdist',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\bdist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command._framework_compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\_framework_compat.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.cmd',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\cmd.py',
+   'PYMODULE'),
+  ('setuptools._distutils.ccompiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.bcppcompiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\bcppcompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.archive_util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils._msvccompiler',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\_msvccompiler.py',
+   'PYMODULE'),
+  ('unittest.mock',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\mock.py',
+   'PYMODULE'),
+  ('unittest',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\__init__.py',
+   'PYMODULE'),
+  ('unittest.signals',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\signals.py',
+   'PYMODULE'),
+  ('unittest.main',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\main.py',
+   'PYMODULE'),
+  ('unittest.runner',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\runner.py',
+   'PYMODULE'),
+  ('unittest.loader',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\loader.py',
+   'PYMODULE'),
+  ('unittest.suite',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\suite.py',
+   'PYMODULE'),
+  ('unittest.case',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\case.py',
+   'PYMODULE'),
+  ('difflib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\difflib.py',
+   'PYMODULE'),
+  ('unittest.async_case',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\async_case.py',
+   'PYMODULE'),
+  ('unittest.result',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\result.py',
+   'PYMODULE'),
+  ('unittest.util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\unittest\\util.py',
+   'PYMODULE'),
+  ('asyncio',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py',
+   'PYMODULE'),
+  ('asyncio.unix_events',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\unix_events.py',
+   'PYMODULE'),
+  ('asyncio.log',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\log.py',
+   'PYMODULE'),
+  ('asyncio.windows_events',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\windows_events.py',
+   'PYMODULE'),
+  ('asyncio.windows_utils',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\windows_utils.py',
+   'PYMODULE'),
+  ('asyncio.selector_events',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\selector_events.py',
+   'PYMODULE'),
+  ('asyncio.proactor_events',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\proactor_events.py',
+   'PYMODULE'),
+  ('asyncio.base_subprocess',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\base_subprocess.py',
+   'PYMODULE'),
+  ('asyncio.subprocess',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\subprocess.py',
+   'PYMODULE'),
+  ('asyncio.streams',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\streams.py',
+   'PYMODULE'),
+  ('asyncio.queues',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\queues.py',
+   'PYMODULE'),
+  ('asyncio.runners',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\runners.py',
+   'PYMODULE'),
+  ('asyncio.trsock',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\trsock.py',
+   'PYMODULE'),
+  ('asyncio.staggered',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\staggered.py',
+   'PYMODULE'),
+  ('typing',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\typing.py',
+   'PYMODULE'),
+  ('asyncio.tasks',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\tasks.py',
+   'PYMODULE'),
+  ('asyncio.base_tasks',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\base_tasks.py',
+   'PYMODULE'),
+  ('asyncio.locks',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\locks.py',
+   'PYMODULE'),
+  ('asyncio.sslproto',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\sslproto.py',
+   'PYMODULE'),
+  ('asyncio.transports',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\transports.py',
+   'PYMODULE'),
+  ('asyncio.base_events',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\base_events.py',
+   'PYMODULE'),
+  ('asyncio.protocols',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\protocols.py',
+   'PYMODULE'),
+  ('asyncio.futures',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\futures.py',
+   'PYMODULE'),
+  ('asyncio.events',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\events.py',
+   'PYMODULE'),
+  ('asyncio.exceptions',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\exceptions.py',
+   'PYMODULE'),
+  ('asyncio.coroutines',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\coroutines.py',
+   'PYMODULE'),
+  ('asyncio.base_futures',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\base_futures.py',
+   'PYMODULE'),
+  ('asyncio.format_helpers',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\format_helpers.py',
+   'PYMODULE'),
+  ('asyncio.constants',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\constants.py',
+   'PYMODULE'),
+  ('setuptools._distutils._macos_compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\_macos_compat.py',
+   'PYMODULE'),
+  ('setuptools._distutils._log',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\_log.py',
+   'PYMODULE'),
+  ('setuptools._distutils._functools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\_functools.py',
+   'PYMODULE'),
+  ('setuptools._distutils._collections',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\_collections.py',
+   'PYMODULE'),
+  ('setuptools._distutils',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_distutils\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\zipp.py',
+   'PYMODULE'),
+  ('setuptools._vendor.typing_extensions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\typing_extensions.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._types',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\tomli\\_types.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._re',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\tomli\\_re.py',
+   'PYMODULE'),
+  ('__future__',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\__future__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._parser',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\tomli\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.tags',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.specifiers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.requirements',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.metadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\metadata.py',
+   'PYMODULE'),
+  ('typing_extensions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\typing_extensions.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._tokenizer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('dataclasses',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\dataclasses.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._structures',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._parser',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._musllinux',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._manylinux',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._elffile',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.ordered_set',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\ordered_set.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools.recipes',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools.more',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\more_itertools\\more.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.text',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.extern',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\extern\\__init__.py',
+   'PYMODULE'),
+  ('importlib.resources',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\importlib\\resources.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.functools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.context',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\jaraco\\context.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\jaraco\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources.simple',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\simple.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources.readers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\readers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources.abc',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\abc.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources._legacy',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\_legacy.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources._itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources._compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\_compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources._common',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\_common.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources._adapters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\_adapters.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_resources',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._text',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_text.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._py39compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_py39compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._meta',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._functools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_functools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._collections',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_collections.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._adapters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_adapters.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.msvc',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\msvc.py',
+   'PYMODULE'),
+  ('json',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\json\\__init__.py',
+   'PYMODULE'),
+  ('json.encoder',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\json\\encoder.py',
+   'PYMODULE'),
+  ('json.decoder',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\json\\decoder.py',
+   'PYMODULE'),
+  ('json.scanner',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\json\\scanner.py',
+   'PYMODULE'),
+  ('distutils.command.build_ext',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\command\\build_ext.py',
+   'PYMODULE'),
+  ('distutils._msvccompiler',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\_msvccompiler.py',
+   'PYMODULE'),
+  ('distutils.extension',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\extension.py',
+   'PYMODULE'),
+  ('setuptools.warnings',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\warnings.py',
+   'PYMODULE'),
+  ('setuptools.extension',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\extension.py',
+   'PYMODULE'),
+  ('setuptools.dist',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\dist.py',
+   'PYMODULE'),
+  ('setuptools.installer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\installer.py',
+   'PYMODULE'),
+  ('pkg_resources',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\__init__.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\tags.py',
+   'PYMODULE'),
+  ('packaging.specifiers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('packaging.requirements',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('packaging.metadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\metadata.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging.licenses._spdx',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\licenses\\_spdx.py',
+   'PYMODULE'),
+  ('packaging.licenses',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\licenses\\__init__.py',
+   'PYMODULE'),
+  ('packaging._tokenizer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging._structures',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('packaging._parser',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('packaging._musllinux',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('packaging._manylinux',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('packaging._elffile',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('packaging',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.zipp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\zipp.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.typing_extensions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\typing_extensions.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.windows',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\windows.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.unix',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\unix.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.macos',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\macos.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.api',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\api.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.android',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\android.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.__main__',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__main__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.tags',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.metadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\metadata.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._tokenizer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._parser',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._musllinux',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._manylinux',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._elffile',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools.recipes',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\recipes.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools.more',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\more.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.text',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\text\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.functools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\functools.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.context',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\context.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.simple',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\simple.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.readers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\readers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.abc',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\abc.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._legacy',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_legacy.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_itertools.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._common',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_common.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._adapters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_adapters.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources.extern',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
+   'PYMODULE'),
+  ('imp',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\imp.py',
+   'PYMODULE'),
+  ('plistlib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\plistlib.py',
+   'PYMODULE'),
+  ('setuptools.wheel',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\wheel.py',
+   'PYMODULE'),
+  ('setuptools.archive_util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools._path',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_path.py',
+   'PYMODULE'),
+  ('setuptools.command.egg_info',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\egg_info.py',
+   'PYMODULE'),
+  ('setuptools.glob',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\glob.py',
+   'PYMODULE'),
+  ('setuptools.unicode_utils',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\unicode_utils.py',
+   'PYMODULE'),
+  ('setuptools.command.bdist_egg',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\bdist_egg.py',
+   'PYMODULE'),
+  ('setuptools.command.setopt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\setopt.py',
+   'PYMODULE'),
+  ('setuptools.command.sdist',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools.command.build',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\build.py',
+   'PYMODULE'),
+  ('distutils.command.build',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\command\\build.py',
+   'PYMODULE'),
+  ('distutils.command.sdist',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools.command._requirestxt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\_requirestxt.py',
+   'PYMODULE'),
+  ('distutils.filelist',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\filelist.py',
+   'PYMODULE'),
+  ('setuptools.config.pyprojecttoml',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\pyprojecttoml.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.fastjsonschema_validations',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.fastjsonschema_exceptions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.extra_validations',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.error_reporting',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.formats',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_validate_pyproject\\formats.py',
+   'PYMODULE'),
+  ('setuptools.config._apply_pyprojecttoml',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\_apply_pyprojecttoml.py',
+   'PYMODULE'),
+  ('setuptools.config.expand',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\expand.py',
+   'PYMODULE'),
+  ('setuptools.errors',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\errors.py',
+   'PYMODULE'),
+  ('setuptools.config.setupcfg',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\setupcfg.py',
+   'PYMODULE'),
+  ('setuptools.config',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\config\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._importlib',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_importlib.py',
+   'PYMODULE'),
+  ('importlib_metadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\__init__.py',
+   'PYMODULE'),
+  ('zipp.compat.overlay',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zipp\\compat\\overlay.py',
+   'PYMODULE'),
+  ('zipp.compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zipp\\compat\\__init__.py',
+   'PYMODULE'),
+  ('zipp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zipp\\__init__.py',
+   'PYMODULE'),
+  ('zipp.glob',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zipp\\glob.py',
+   'PYMODULE'),
+  ('zipp.compat.py310',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zipp\\compat\\py310.py',
+   'PYMODULE'),
+  ('importlib_metadata._adapters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_adapters.py',
+   'PYMODULE'),
+  ('importlib_metadata._text',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_text.py',
+   'PYMODULE'),
+  ('importlib_metadata.compat.py311',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\compat\\py311.py',
+   'PYMODULE'),
+  ('importlib_metadata.compat.py39',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\compat\\py39.py',
+   'PYMODULE'),
+  ('importlib_metadata.compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\compat\\__init__.py',
+   'PYMODULE'),
+  ('importlib_metadata._itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_itertools.py',
+   'PYMODULE'),
+  ('importlib_metadata._functools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_functools.py',
+   'PYMODULE'),
+  ('importlib_metadata._compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_compat.py',
+   'PYMODULE'),
+  ('importlib_metadata._collections',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_collections.py',
+   'PYMODULE'),
+  ('importlib_metadata._meta',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata\\_meta.py',
+   'PYMODULE'),
+  ('setuptools.windows_support',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\windows_support.py',
+   'PYMODULE'),
+  ('setuptools.command',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.command.build_py',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\command\\build_py.py',
+   'PYMODULE'),
+  ('distutils.command.build_py',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\command\\build_py.py',
+   'PYMODULE'),
+  ('distutils.command.bdist',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\command\\bdist.py',
+   'PYMODULE'),
+  ('setuptools._reqs',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_reqs.py',
+   'PYMODULE'),
+  ('setuptools._entry_points',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_entry_points.py',
+   'PYMODULE'),
+  ('setuptools._itertools',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools.discovery',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\discovery.py',
+   'PYMODULE'),
+  ('setuptools.depends',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\depends.py',
+   'PYMODULE'),
+  ('setuptools._imp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_imp.py',
+   'PYMODULE'),
+  ('setuptools.version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\version.py',
+   'PYMODULE'),
+  ('setuptools.logging',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\logging.py',
+   'PYMODULE'),
+  ('setuptools.monkey',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\monkey.py',
+   'PYMODULE'),
+  ('setuptools._core_metadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_core_metadata.py',
+   'PYMODULE'),
+  ('setuptools._normalization',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\setuptools\\_normalization.py',
+   'PYMODULE'),
+  ('distutils.util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\util.py',
+   'PYMODULE'),
+  ('distutils.errors',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\errors.py',
+   'PYMODULE'),
+  ('distutils.core',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\core.py',
+   'PYMODULE'),
+  ('distutils.config',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\distutils\\config.py',
+   'PYMODULE'),
+  ('_distutils_hack.override',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\_distutils_hack\\override.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('sllurp.llrp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp\\llrp.py',
+   'PYMODULE'),
+  ('sllurp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp\\__init__.py',
+   'PYMODULE'),
+  ('sllurp.llrp_decoder',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp\\llrp_decoder.py',
+   'PYMODULE'),
+  ('six',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\six.py',
+   'PYMODULE'),
+  ('twisted.protocols.basic',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\protocols\\basic.py',
+   'PYMODULE'),
+  ('twisted.protocols',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\protocols\\__init__.py',
+   'PYMODULE'),
+  ('twisted',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\__init__.py',
+   'PYMODULE'),
+  ('twisted._version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_version.py',
+   'PYMODULE'),
+  ('incremental',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\incremental\\__init__.py',
+   'PYMODULE'),
+  ('incremental._version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\incremental\\_version.py',
+   'PYMODULE'),
+  ('tomli',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\tomli\\__init__.py',
+   'PYMODULE'),
+  ('tomli._parser',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\tomli\\_parser.py',
+   'PYMODULE'),
+  ('tomli._types',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\tomli\\_types.py',
+   'PYMODULE'),
+  ('tomli._re',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\tomli\\_re.py',
+   'PYMODULE'),
+  ('twisted.python.log',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\log.py',
+   'PYMODULE'),
+  ('twisted.python.threadable',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\threadable.py',
+   'PYMODULE'),
+  ('twisted.python.util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\util.py',
+   'PYMODULE'),
+  ('twisted.python.deprecate',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\deprecate.py',
+   'PYMODULE'),
+  ('twisted.python.reflect',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\reflect.py',
+   'PYMODULE'),
+  ('twisted.python.compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\compat.py',
+   'PYMODULE'),
+  ('twisted.python.failure',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\failure.py',
+   'PYMODULE'),
+  ('pdb',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pdb.py',
+   'PYMODULE'),
+  ('code',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\code.py',
+   'PYMODULE'),
+  ('codeop',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\codeop.py',
+   'PYMODULE'),
+  ('bdb',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\bdb.py',
+   'PYMODULE'),
+  ('cmd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\cmd.py',
+   'PYMODULE'),
+  ('twisted.python.context',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\context.py',
+   'PYMODULE'),
+  ('twisted.logger._legacy',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_legacy.py',
+   'PYMODULE'),
+  ('twisted.logger._stdlib',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_stdlib.py',
+   'PYMODULE'),
+  ('constantly',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\constantly\\__init__.py',
+   'PYMODULE'),
+  ('constantly._version',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\constantly\\_version.py',
+   'PYMODULE'),
+  ('constantly._constants',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\constantly\\_constants.py',
+   'PYMODULE'),
+  ('twisted.logger._levels',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_levels.py',
+   'PYMODULE'),
+  ('twisted.logger._interfaces',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_interfaces.py',
+   'PYMODULE'),
+  ('twisted.logger._logger',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_logger.py',
+   'PYMODULE'),
+  ('twisted.logger._format',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_format.py',
+   'PYMODULE'),
+  ('twisted.logger._flatten',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_flatten.py',
+   'PYMODULE'),
+  ('twisted.python._tzhelper',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\_tzhelper.py',
+   'PYMODULE'),
+  ('twisted.logger._global',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_global.py',
+   'PYMODULE'),
+  ('twisted.logger._observer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_observer.py',
+   'PYMODULE'),
+  ('twisted.logger._io',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_io.py',
+   'PYMODULE'),
+  ('twisted.logger._filter',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_filter.py',
+   'PYMODULE'),
+  ('twisted.logger._file',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_file.py',
+   'PYMODULE'),
+  ('twisted.logger._buffer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_buffer.py',
+   'PYMODULE'),
+  ('twisted.logger',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\__init__.py',
+   'PYMODULE'),
+  ('twisted.logger._capture',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_capture.py',
+   'PYMODULE'),
+  ('twisted.logger._json',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\logger\\_json.py',
+   'PYMODULE'),
+  ('uuid',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\uuid.py',
+   'PYMODULE'),
+  ('ctypes.util',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\util.py',
+   'PYMODULE'),
+  ('ctypes._aix',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\_aix.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dyld',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\macholib\\dyld.py',
+   'PYMODULE'),
+  ('ctypes.macholib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\macholib\\__init__.py',
+   'PYMODULE'),
+  ('ctypes.macholib.dylib',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\macholib\\dylib.py',
+   'PYMODULE'),
+  ('ctypes.macholib.framework',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\ctypes\\macholib\\framework.py',
+   'PYMODULE'),
+  ('twisted.python',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\__init__.py',
+   'PYMODULE'),
+  ('twisted.python.sendmsg',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\sendmsg.py',
+   'PYMODULE'),
+  ('twisted.python.components',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\components.py',
+   'PYMODULE'),
+  ('zope.interface.adapter',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\adapter.py',
+   'PYMODULE'),
+  ('zope.interface.interfaces',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\interfaces.py',
+   'PYMODULE'),
+  ('zope.interface._compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\_compat.py',
+   'PYMODULE'),
+  ('zope.interface.ro',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\ro.py',
+   'PYMODULE'),
+  ('zope.interface.interface',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\interface.py',
+   'PYMODULE'),
+  ('zope.interface.exceptions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\exceptions.py',
+   'PYMODULE'),
+  ('zope.interface.declarations',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\declarations.py',
+   'PYMODULE'),
+  ('twisted.python.lockfile',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\lockfile.py',
+   'PYMODULE'),
+  ('twisted.python.runtime',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\runtime.py',
+   'PYMODULE'),
+  ('twisted.python._inotify',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\_inotify.py',
+   'PYMODULE'),
+  ('twisted.python.filepath',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\filepath.py',
+   'PYMODULE'),
+  ('twisted.python.win32',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\win32.py',
+   'PYMODULE'),
+  ('twisted.python.versions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\versions.py',
+   'PYMODULE'),
+  ('twisted.internet.interfaces',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\interfaces.py',
+   'PYMODULE'),
+  ('twisted.python.threadpool',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\threadpool.py',
+   'PYMODULE'),
+  ('twisted._threads',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\__init__.py',
+   'PYMODULE'),
+  ('twisted._threads._threadworker',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\_threadworker.py',
+   'PYMODULE'),
+  ('twisted._threads._convenience',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\_convenience.py',
+   'PYMODULE'),
+  ('twisted._threads._team',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\_team.py',
+   'PYMODULE'),
+  ('twisted._threads._pool',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\_pool.py',
+   'PYMODULE'),
+  ('twisted._threads._memory',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\_memory.py',
+   'PYMODULE'),
+  ('twisted._threads._ithreads',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\_threads\\_ithreads.py',
+   'PYMODULE'),
+  ('twisted.protocols.tls',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\protocols\\tls.py',
+   'PYMODULE'),
+  ('twisted.protocols.policies',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\protocols\\policies.py',
+   'PYMODULE'),
+  ('twisted.internet.error',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\error.py',
+   'PYMODULE'),
+  ('twisted.internet.main',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\main.py',
+   'PYMODULE'),
+  ('twisted.internet._sslverify',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_sslverify.py',
+   'PYMODULE'),
+  ('twisted.internet._idna',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_idna.py',
+   'PYMODULE'),
+  ('idna',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\idna\\__init__.py',
+   'PYMODULE'),
+  ('idna.package_data',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\idna\\package_data.py',
+   'PYMODULE'),
+  ('idna.intranges',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\idna\\intranges.py',
+   'PYMODULE'),
+  ('idna.core',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\idna\\core.py',
+   'PYMODULE'),
+  ('idna.uts46data',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\idna\\uts46data.py',
+   'PYMODULE'),
+  ('idna.idnadata',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\idna\\idnadata.py',
+   'PYMODULE'),
+  ('twisted.python.randbytes',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\python\\randbytes.py',
+   'PYMODULE'),
+  ('attr',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\__init__.py',
+   'PYMODULE'),
+  ('attr._version_info',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_version_info.py',
+   'PYMODULE'),
+  ('attr._next_gen',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_next_gen.py',
+   'PYMODULE'),
+  ('attr._make',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_make.py',
+   'PYMODULE'),
+  ('attr._compat',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_compat.py',
+   'PYMODULE'),
+  ('attr._funcs',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_funcs.py',
+   'PYMODULE'),
+  ('attr._cmp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_cmp.py',
+   'PYMODULE'),
+  ('attr.validators',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\validators.py',
+   'PYMODULE'),
+  ('attr.filters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\filters.py',
+   'PYMODULE'),
+  ('attr.exceptions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\exceptions.py',
+   'PYMODULE'),
+  ('attr.converters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\converters.py',
+   'PYMODULE'),
+  ('attr.setters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\setters.py',
+   'PYMODULE'),
+  ('attr._config',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attr\\_config.py',
+   'PYMODULE'),
+  ('twisted.internet._producer_helpers',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_producer_helpers.py',
+   'PYMODULE'),
+  ('twisted.names.dns',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\names\\dns.py',
+   'PYMODULE'),
+  ('twisted.names',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\names\\__init__.py',
+   'PYMODULE'),
+  ('twisted.names.error',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\names\\error.py',
+   'PYMODULE'),
+  ('twisted.internet.ssl',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\ssl.py',
+   'PYMODULE'),
+  ('twisted.internet.tcp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\tcp.py',
+   'PYMODULE'),
+  ('twisted.internet.fdesc',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\fdesc.py',
+   'PYMODULE'),
+  ('twisted.internet.base',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\base.py',
+   'PYMODULE'),
+  ('twisted.internet._signals',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_signals.py',
+   'PYMODULE'),
+  ('twisted.internet.process',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\process.py',
+   'PYMODULE'),
+  ('pty',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\lib\\pty.py',
+   'PYMODULE'),
+  ('twisted.internet._baseprocess',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_baseprocess.py',
+   'PYMODULE'),
+  ('attrs',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs\\__init__.py',
+   'PYMODULE'),
+  ('attrs.validators',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs\\validators.py',
+   'PYMODULE'),
+  ('attrs.setters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs\\setters.py',
+   'PYMODULE'),
+  ('attrs.filters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs\\filters.py',
+   'PYMODULE'),
+  ('attrs.exceptions',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs\\exceptions.py',
+   'PYMODULE'),
+  ('attrs.converters',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs\\converters.py',
+   'PYMODULE'),
+  ('twisted.internet._resolver',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_resolver.py',
+   'PYMODULE'),
+  ('twisted.internet.threads',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\threads.py',
+   'PYMODULE'),
+  ('twisted.internet._newtls',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_newtls.py',
+   'PYMODULE'),
+  ('twisted.internet.address',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\address.py',
+   'PYMODULE'),
+  ('twisted.internet.abstract',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\abstract.py',
+   'PYMODULE'),
+  ('zope.interface',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\__init__.py',
+   'PYMODULE'),
+  ('zope', '-', 'PYMODULE'),
+  ('twisted.internet.protocol',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\protocol.py',
+   'PYMODULE'),
+  ('twisted.internet.task',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\task.py',
+   'PYMODULE'),
+  ('sllurp.util',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp\\util.py',
+   'PYMODULE'),
+  ('sllurp.llrp_errors',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp\\llrp_errors.py',
+   'PYMODULE'),
+  ('sllurp.llrp_proto',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp\\llrp_proto.py',
+   'PYMODULE'),
+  ('twisted.internet.defer',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\defer.py',
+   'PYMODULE'),
+  ('twisted.internet.reactor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\reactor.py',
+   'PYMODULE'),
+  ('twisted.internet.default',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\default.py',
+   'PYMODULE'),
+  ('twisted.internet.selectreactor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\selectreactor.py',
+   'PYMODULE'),
+  ('twisted.internet.win32eventreactor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\win32eventreactor.py',
+   'PYMODULE'),
+  ('twisted.internet.posixbase',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\posixbase.py',
+   'PYMODULE'),
+  ('twisted.internet._dumbwin32proc',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_dumbwin32proc.py',
+   'PYMODULE'),
+  ('twisted.internet._pollingfile',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_pollingfile.py',
+   'PYMODULE'),
+  ('twisted.internet.unix',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\unix.py',
+   'PYMODULE'),
+  ('twisted.internet.udp',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\udp.py',
+   'PYMODULE'),
+  ('twisted.internet._multicast',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\_multicast.py',
+   'PYMODULE'),
+  ('twisted.internet.pollreactor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\pollreactor.py',
+   'PYMODULE'),
+  ('twisted.internet.epollreactor',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\epollreactor.py',
+   'PYMODULE'),
+  ('twisted.internet',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\twisted\\internet\\__init__.py',
+   'PYMODULE')],
+ [('python38.dll',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\python38.dll',
+   'BINARY'),
+  ('_lzma.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_asyncio.pyd',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('zope\\interface\\_zope_interface_coptimizations.cp38-win_amd64.pyd',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\zope\\interface\\_zope_interface_coptimizations.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('libffi-7.dll',
+   'C:\\Users\\VICTUS\\AppData\\Local\\Programs\\Python\\Python38\\DLLs\\libffi-7.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-fibers-l1-1-0.dll',
+   'C:\\Program Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-fibers-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program '
+   'Files\\Zulu\\zulu-21\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY')],
+ [],
+ [],
+ [('importlib_metadata-8.5.0.dist-info\\INSTALLER',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata-8.5.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('importlib_metadata-8.5.0.dist-info\\RECORD',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata-8.5.0.dist-info\\RECORD',
+   'DATA'),
+  ('importlib_metadata-8.5.0.dist-info\\WHEEL',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata-8.5.0.dist-info\\WHEEL',
+   'DATA'),
+  ('importlib_metadata-8.5.0.dist-info\\top_level.txt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata-8.5.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('importlib_metadata-8.5.0.dist-info\\LICENSE',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata-8.5.0.dist-info\\LICENSE',
+   'DATA'),
+  ('importlib_metadata-8.5.0.dist-info\\METADATA',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\importlib_metadata-8.5.0.dist-info\\METADATA',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\entry_points.txt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\entry_points.txt',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\REQUESTED',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\WHEEL',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\WHEEL',
+   'DATA'),
+  ('wheel-0.41.2.dist-info\\INSTALLER',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\wheel-0.41.2.dist-info\\INSTALLER',
+   'DATA'),
+  ('wheel-0.41.2.dist-info\\LICENSE.txt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\wheel-0.41.2.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('wheel-0.41.2.dist-info\\METADATA',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\wheel-0.41.2.dist-info\\METADATA',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\INSTALLER',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('wheel-0.41.2.dist-info\\entry_points.txt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\wheel-0.41.2.dist-info\\entry_points.txt',
+   'DATA'),
+  ('attrs-25.3.0.dist-info\\INSTALLER',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs-25.3.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('attrs-25.3.0.dist-info\\WHEEL',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs-25.3.0.dist-info\\WHEEL',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\METADATA',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\METADATA',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\top_level.txt',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('wheel-0.41.2.dist-info\\WHEEL',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\wheel-0.41.2.dist-info\\WHEEL',
+   'DATA'),
+  ('attrs-25.3.0.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs-25.3.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('sllurp-0.4.0.dist-info\\RECORD',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\sllurp-0.4.0.dist-info\\RECORD',
+   'DATA'),
+  ('wheel-0.41.2.dist-info\\RECORD',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\wheel-0.41.2.dist-info\\RECORD',
+   'DATA'),
+  ('attrs-25.3.0.dist-info\\METADATA',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs-25.3.0.dist-info\\METADATA',
+   'DATA'),
+  ('attrs-25.3.0.dist-info\\RECORD',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\.venv\\lib\\site-packages\\attrs-25.3.0.dist-info\\RECORD',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\VICTUS\\Desktop\\Nanosatellites Mission '
+   'Design\\RFIDScanReader\\RFID Scan '
+   'Reader\\build\\RFIDReaderDowngradeLibrary\\base_library.zip',
+   'DATA')])
