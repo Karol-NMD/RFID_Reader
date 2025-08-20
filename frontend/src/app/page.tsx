@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { clearInterval } from "timers"
 
 interface TagRead {
   id: number
@@ -14,169 +13,109 @@ interface TagRead {
   last_seen: string
 }
 
-type SortKey = keyof Pick<TagRead, "epc_hex" | "epc_ascii" | "last_seen"> | null
-
-export default function Home() {
+export default function Dashboard() {
   const [readerIP, setReaderIP] = useState<string>("")
-  const [connectStatus, setConnectStatus] = useState<boolean>(false)
-  const [tagReads, setTagReads] = useState<TagRead[]>([])
-  const [sortKey, setSortKey] = useState<SortKey>("last_seen")
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc")
-  const [searchTerm, setSearchTerm] = useState("")
-  const [loading, setLoading] = useState(true)
+  const [status, setStatus] = useState<"Disconnected" | "Connected" | "Running">("Disconnected")
+  const [tags, setTags] = useState<TagRead[]>([])
   const [error, setError] = useState("")
+  const [antennas, setAntennas] = useState<number[]>([])
+  const [powerMap, setPowerMap] = useState<{ [key: number]: number }>({})
 
-  // Safe localStorage load on mount
+  // Load saved IP if any
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedIP = localStorage.getItem("rfid_ip");
-      const connected = localStorage.getItem("rfid_connected") === "true";
-      if (storedIP) setReaderIP(storedIP);
-      setConnectStatus(connected);
-    }
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      axios.get("http://127.0.0.1:8000/api/db-tags")
-        .then((res) => {
-          const lines = res.data.output
-            .trim()
-            .split('\n')
-            .filter(line => line.startsWith("ID:"))
-
-          const result: TagRead[] = lines.map(line => {
-            const obj: any = {}
-            const parts = line.split('|').map(p => p.trim())
-
-            parts.forEach(part => {
-              const [key, ...valParts] = part.split(':')
-              let value = valParts.join(':').trim()
-
-              switch (key.trim()) {
-                case "ID":
-                  obj.id = Number(value)
-                  break
-                case "EPC_Hex":
-                  obj.epc_hex = value
-                  break
-                case "EPC_Ascii":
-                  obj.epc_ascii = value === 'None' ? null : value
-                  break
-                case "Antenna":
-                  obj.antenna = value
-                  break
-                case "Channel":
-                  obj.channel = value
-                  break
-                case "Seen":
-                  obj.seen_count = value.replace('x', '')
-                  break
-                case 'Time':
-                  obj.last_seen = value
-                  break
-                default:
-                  break
-              }
-            })
-
-            return obj
-          })
-
-          console.log(result);
-          setTagReads(result)
-        })
-        .catch(() => setError("❌ Failed to load tag data."))
-        .finally(() => setLoading(false))
-    }, 500)
-
-    return () => clearInterval(interval);
+    const storedIP = localStorage.getItem("rfid_ip")
+    if (storedIP) setReaderIP(storedIP)
   }, [])
 
-  const handleSort = (key: SortKey) => {
-    if (sortKey === key) {
-      setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
-    } else {
-      setSortKey(key)
-      setSortOrder("asc")
+  // Poll live tags every second
+  useEffect(() => {
+    const socket = new WebSocket("ws://127.0.0.1:8000/ws/live-tags")
+
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data)
+      if (data.tags) {
+        setTags(data.tags)
+      }
+    }
+
+    socket.onerror = () => {
+      setError("⚠️ WebSocket error.")
+    }
+
+    return () => socket.close()
+  }, [])
+
+  const fetchAntennas = async () => {
+    const res = await axios.get("http://127.0.0.1:8000/api/antennas")
+    const antList = res.data.antennas || []
+    setAntennas(antList)
+    setPowerMap(Object.fromEntries(antList.map((a: number) => [a, 20]))) // default 20 dBm
+  }
+
+  const applyTxPower = async () => {
+    await axios.post("http://127.0.0.1:8000/api/set-tx-power", {
+      power_map: powerMap,
+    })
+    alert("✅ Power settings applied.")
+  }
+
+  const notify = (msg: string) => alert(msg)
+
+  const pingReader = async () => {
+    try {
+      const res = await axios.post("http://127.0.0.1:8000/api/ping", { ip: readerIP })
+      notify(res.data.message)
+    } catch {
+      notify("❌ Ping failed")
     }
   }
 
-  const filteredReads = tagReads.filter(tag =>
-    tag.epc_hex.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    (tag.epc_ascii?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false)
-  )
-
-  const sortedReads = [...filteredReads].sort((a, b) => {
-    if (!sortKey) return 0
-
-    const aVal = a[sortKey] ?? ""
-    const bVal = b[sortKey] ?? ""
-
-
-    if (sortKey === "last_seen") {
-      return sortOrder === "asc"
-        ? new Date(aVal).getTime() - new Date(bVal).getTime()
-        : new Date(bVal).getTime() - new Date(aVal).getTime()
+  const connect = async () => {
+    try {
+      await axios.post("http://127.0.0.1:8000/api/connect", { ip: readerIP })
+      localStorage.setItem("rfid_ip", readerIP)
+      setStatus("Connected")
+      notify("✅ Connected")
+    } catch {
+      notify("❌ Connect failed")
     }
-    return sortOrder === "asc"
-      ? String(aVal).localeCompare(String(bVal))
-      : String(bVal).localeCompare(String(aVal))
-  })
+  }
 
-  const handleConnect = async () => {
+  const disconnect = async () => {
+    try {
+      await axios.post("http://127.0.0.1:8000/api/disconnect")
+      localStorage.removeItem("rfid_ip")
+      setStatus("Disconnected")
+      notify("🔌 Disconnected")
+    } catch {
+      notify("❌ Disconnect failed")
+    }
+  }
+
+  const startInventory = async () => {
     try {
       await axios.post("http://127.0.0.1:8000/api/start-inventory", { ip: readerIP })
-      localStorage.setItem("rfid_ip", readerIP)
-      localStorage.setItem("rfid_connected", "true")
-      setConnectStatus(true)
-    } catch (err) {
-      alert("❌ Failed to connect to reader.")
+      setStatus("Running")
+      notify("📦 Inventory started")
+    } catch {
+      notify("❌ Failed to start inventory")
     }
   }
 
-  const handleDisconnect = async () => {
+  const stopInventory = async () => {
     try {
       await axios.post("http://127.0.0.1:8000/api/stop-inventory")
-      alert("✅ Inventory stopped successfully.")
-    } catch (err) {
-      alert("❌ Failed to stop inventory on backend.")
+      setStatus("Connected")
+      notify("🛑 Inventory stopped")
+    } catch {
+      notify("❌ Failed to stop inventory")
     }
-    localStorage.removeItem("rfid_ip")
-    localStorage.removeItem("rfid_connected")
-    setConnectStatus(false)
   }
-
-  const handleExport = () => {
-    const csvContent = [
-      ["ID", "EPC_HEX", "EPC_ASCII", "Antenna", "Channel", "Seen Count", "Timestamp"],
-      ...tagReads.map(tag => [
-        tag.id,
-        tag.epc_hex,
-        tag.epc_ascii ?? "",
-        tag.antenna,
-        tag.channel,
-        tag.seen_count,
-        tag.last_seen,
-      ])
-    ]
-      .map(row => row.join(","))
-      .join("\n");
-
-    const blob = new Blob([csvContent], { type: "text/csv" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "tag_reads.csv";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="p-4 max-w-6xl mx-auto">
-      <h1 className="text-3xl text-blue-600 font-bold">RFID Tag Reads</h1>
-      <p className="text-gray-500 mb-6">View, search, sort, and export RFID tag read data</p>
+      <h1 className="text-3xl text-blue-600 font-bold">RFID Live Dashboard</h1>
+      <p className="text-gray-500 mb-6">View RFID tag read data</p>
 
       <div className="flex items-center gap-2 mb-4">
         <input
@@ -184,84 +123,89 @@ export default function Home() {
           placeholder="Enter RFID Reader IP (e.g., 192.168.1.100)"
           value={readerIP}
           onChange={(e) => setReaderIP(e.target.value)}
-          className="border border-blue-300 text-gray-900 px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-96"
+          className="cursor-pointer border-blue-300 text-gray-900 px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-96"
         />
-        <button onClick={handleConnect} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-          Connect
-        </button>
-        <button onClick={handleDisconnect} className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
-          Disconnect
-        </button>
-        <p className="text-sm text-green-700">
-          {connectStatus ? `Connected to ${readerIP}` : "Not connected"}
-        </p>
-      </div>
 
-
-      <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
-        {/* Sort Buttons */}
-        <div className="flex gap-2">
-          <button onClick={() => handleSort("epc_hex")} className="bg-blue-100 text-blue-800 px-4 py-1 rounded">
-            Sort by EPC (HEX)
-          </button>
-          <button onClick={() => handleSort("epc_ascii")} className="bg-blue-100 text-blue-800 px-4 py-1 rounded">
-            Sort by EPC (ASCII)
-          </button>
-          <button onClick={() => handleSort("last_seen")} className="bg-blue-100 text-blue-800 px-4 py-1 rounded">
-            Sort by Time
-          </button>
+        <div className="flex gap-2 flex-wrap">
+          <button onClick={pingReader} className="cursor-pointer bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 active:scale-95 transition transform duration-100">Ping</button>
+          <button onClick={connect} className="cursor-pointer bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 active:scale-95 transition transform duration-100">Connect</button>
+          <button onClick={disconnect} className="cursor-pointer bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 active:scale-95 transition transform duration-100">Disconnect</button>
+          <button onClick={startInventory} className="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 active:scale-95 transition transform duration-100">Start</button>
+          <button onClick={stopInventory} className="cursor-pointer bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 active:scale-95 transition transform duration-100">Stop</button>
         </div>
 
-        {/* Search */}
-        <input
-          type="text"
-          placeholder="Search EPC or ASCII..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-blue-300 text-gray-900 px-3 py-1 rounded"
-        />
-
-        {/* Right-aligned export button */}
-        <button onClick={handleExport} className="bg-gray-100 text-gray-800 font-semibold px-4 py-2 rounded hover:bg-gray-200">
-          Export CSV
-        </button>
+        <div className="text-sm mt-2">
+          <span>Status: </span>
+          <span className={
+            status === "Disconnected" ? "text-red-600" :
+              status === "Connected" ? "text-yellow-500" : "text-green-600"
+          }>
+            {status}
+          </span>
+        </div>
       </div>
 
-      {/* Data Output */}
-      {loading ? (
-        <p className="text-gray-600">Loading...</p>
-      ) : error ? (
-        <p className="text-red-500">{error}</p>
+      <h2 className="text-2xl font-semibold mb-2">📦 Live Tag Reads</h2>
+      {error && <p className="text-red-500">{error}</p>}
+
+      {tags.length === 0 ? (
+        <p className="text-gray-500">No tags yet...</p>
       ) : (
-        <div className="overflow-x-auto border rounded max-h-[80vh] overflow-y-auto">
+        <div className="overflow-x-auto border rounded max-h-[65vh] overflow-y-auto">
           <table className="min-w-full table-auto text-sm text-gray-800">
-            <thead className="bg-gray-100 text-gray-700">
+            <thead className="bg-gray-100 text-gray-700 sticky top-0">
               <tr>
-                <th className="text-left px-4 py-2">ID</th>
                 <th className="text-left px-4 py-2">EPC_HEX</th>
                 <th className="text-left px-4 py-2">EPC_ASCII</th>
                 <th className="text-left px-4 py-2">Antenna</th>
                 <th className="text-left px-4 py-2">Channel</th>
-                <th className="text-left px-4 py-2">Seen</th>
-                <th className="text-left px-4 py-2">Timestamp</th>
+                <th className="text-left px-4 py-2">Seen Count</th>
+                <th className="text-left px-4 py-2">Last Seen</th>
               </tr>
             </thead>
             <tbody>
-              {sortedReads.map((read) => (
-                <tr key={read.id} className="border-t hover:bg-gray-50">
-                  <td className="px-4 py-2 text-gray-900">{read.id}</td>
-                  <td className="px-4 py-2 text-gray-900">{read.epc_hex}</td>
-                  <td className="px-4 py-2 text-gray-900">{read.epc_ascii ?? "-"}</td>
-                  <td className="px-4 py-2 text-gray-900">{read.antenna}</td>
-                  <td className="px-4 py-2 text-gray-900">{read.channel}</td>
-                  <td className="px-4 py-2 text-gray-900">{read.seen_count}</td>
-                  <td className="px-4 py-2 text-gray-900">{new Date(read.last_seen).toLocaleString()}</td>
+              {tags.map((tag, i) => (
+                <tr key={`${tag.epc_hex}-${i}`} className="border-t hover:bg-gray-50">
+                  <td className="px-4 py-2">{tag.epc_hex}</td>
+                  <td className="px-4 py-2">{tag.epc_ascii ?? "-"}</td>
+                  <td className="px-4 py-2">{tag.antenna}</td>
+                  <td className="px-4 py-2">{tag.channel}</td>
+                  <td className="px-4 py-2">{tag.seen_count}</td>
+                  <td className="px-4 py-2">{new Date(tag.last_seen).toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       )}
+      <div className="mt-6">
+        <button onClick={fetchAntennas} className="cursor-pointer bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 active:scale-95 transition duration-100">
+          🔍 Detect Antennas
+        </button>
+
+        {antennas.length > 0 && (
+          <div className="mt-4 space-y-2">
+            {antennas.map((ant) => (
+              <div key={ant} className="flex items-center gap-2">
+                <label>Antenna {ant} TX Power:</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="30"
+                  value={powerMap[ant] || ""}
+                  onChange={(e) => setPowerMap(prev => ({ ...prev, [ant]: Number(e.target.value) }))}
+                  className="cursor-pointer border-blue-300 text-gray-900 px-2 py-1 rounded w-20"
+                />
+              </div>
+            ))}
+            <button onClick={applyTxPower} className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 active:scale-95 transition">
+              💡 Apply TX Power
+            </button>
+          </div>
+        )}
+      </div>
+
     </div>
+
   )
 }

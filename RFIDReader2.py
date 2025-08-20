@@ -7,6 +7,7 @@ import sqlite3
 import datetime
 from queue import Queue, Empty
 from typing import Optional
+import os
 
 from sllurp.llrp import (
     LLRP_DEFAULT_PORT,
@@ -21,8 +22,7 @@ PORT = LLRP_DEFAULT_PORT
 # -------- GLOBALS -------- #
 READER: Optional[LLRPReaderClient] = None
 TAG_QUEUE = Queue()
-LOG_FILE_PATH = "tag_reads.txt"
-DB_FILE = "tags.db"
+DB_FILE = "tags_bassa2.db"
 stop_event = threading.Event()
 
 # -------- LOGGING SETUP -------- #
@@ -121,42 +121,12 @@ def connection_event_cb(_reader, event):
     else:
         logging.info(f"ℹ️ Other Event: {event}")
 
-
-# # -------- COMMAND FUNCTIONS -------- #
-# def clear_tag_data():
-#     print("🧹 Tag data cleared.")
-
-
-# def start_reading():
-#     if READER and READER.is_alive():
-#         clear_tag_data()
-#         READER.llrp.startInventory()
-#         print("📡 Started inventory.")
-
-
-# def stop_reading():
-#     if READER and READER.is_alive():
-#         READER.llrp.stopPolitely()
-#         print("🛑 Stopped inventory.")
-
-
-# def print_reader_state():
-#     if READER and READER.is_alive():
-#         print(f"📊 Reader state: {LLRPReaderState.getStateName(READER.llrp.state)}")
-#     else:
-#         print("🔌 Reader not connected.")
-
-
 # -------- THREAD: TAG DISPLAY -------- #
 def process_tags_console():
     while not stop_event.is_set():
         try:
             tag = TAG_QUEUE.get(timeout=0.1)
             print(f"\n📦 New tag: {tag}")
-            # print(f" - EPC (HEX): {tag['epc_hex']} || EPC (ASCII): {tag['epc_ascii']} | Antenna: {tag['antenna']} | "
-            #       f"Ch: {tag['channel']} | Seen: {tag['seen_count']}x | Time: {tag['last_seen']}")
-            with open(LOG_FILE_PATH, "a") as f:
-                f.write(f"{tag}\n")
             save_tag_to_db(tag)  # Save to SQLite
         except Empty:
             continue
@@ -164,106 +134,85 @@ def process_tags_console():
             print(f"❌ Error in tag processing thread: {e}")
         time.sleep(0.05)
 
+def get_reader_antennas():
+    global READER
+    if not READER:
+        return []
 
-# -------- USER INTERFACE LOOP -------- #
-# def user_interface():
-#     while True:
-#         print("\nCommands: [start] [stop] [clear] [state] [view] [exit]")
-#         cmd = input(">> ").strip().lower()
-#         if cmd == "start":
-#             start_reading()
-#         elif cmd == "stop":
-#             stop_reading()
-#         elif cmd == "clear":
-#             clear_tag_data()
-#         elif cmd == "state":
-#             print_reader_state()
-#         elif cmd == "view":
-#             view_database_contents()
-#         elif cmd == "exit":
-#             stop_reading()
-#             break
-#         else:
-#             print("❓ Unknown command.")
-
-
-# -------- MAIN -------- #
-def start_inventory_with_ip(ip_address):
-    global READER, LOG_FILE_PATH, stop_event
-
-    # Setup SQLite
-    init_db()
-
-    stop_event.clear()
-
-    LOG_FILE_PATH = "tag_reads.txt"
-
-    # print("📁 Please choose a file to save tag logs...")
-    # log_path = filedialog.asksaveasfilename(
-    #     title="Select log file location",
-    #     defaultextension=".txt",
-    #     filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
-    # )
-
-    # if log_path:
-    #     LOG_FILE_PATH = log_path
-    #     print(f"✅ Logging to: {LOG_FILE_PATH}")
-    # else:
-    #     print("⚠️ No file selected. Using default: tag_reads.txt")
-
-    # reader_ip = input("🔧 Enter RFID reader IP address (e.g., 192.168.1.100): ").strip()
-    # if not reader_ip:
-    #     print("❌ No IP address entered. Exiting...")
-    #     return
-
-    # print("🚀 Initializing RFID Reader...")
-
-    print(f"🔌 Connecting to RFID reader at {ip_address}...")
-
-    # Create configuration with frequent reporting
-    config = LLRPReaderConfig()
-    config.reset_on_connect = True
-    config.start_inventory = True
-    config.tx_power = {1: 0, 2: 0}
-    config.antennas = [1, 2]
-    config.report_every_n_tags = 1  # Report after every tag seen
-    config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
-    config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
-
-    # Configure the fields to include in each tag report
-    config.tag_content_selector = {
-        'EnableROSpecID': False,
-        'EnableSpecIndex': False,
-        'EnableInventoryParameterSpecID': False,
-        'EnableAntennaID': True,
-        'EnableChannelIndex': True,
-        'EnablePeakRSSI': True,
-        'EnableFirstSeenTimestamp': True,
-        'EnableLastSeenTimestamp': True,
-        'EnableTagSeenCount': True,
-        'EnableAccessSpecID': True,
-    }
-
-    # Connect and bind callbacks
     try:
+        antennas = READER.llrp.get_antenna_config()
+        return list(antennas.keys())
+    except Exception as e:
+        print(f"⚠️ Failed to get antenna info: {e}")
+        return []
+
+def set_tx_power_for_antennas(power_map: dict):
+    global READER
+    if not READER:
+        raise Exception("Reader not connected.")
+
+    try:
+        READER.llrp.set_tx_power(power_map)
+        return True
+    except Exception as e:
+        raise Exception(f"Error setting TX power: {e}")
+
+def connect_reader(ip_address):
+    global READER, stop_event
+    init_db()
+    stop_event.clear()
+    try:
+        config = LLRPReaderConfig()
+        config.reset_on_connect = True
+        config.start_inventory = False
+        config.tx_power = {1: 0, 2: 0, 3: 0, 4: 0}
+        config.antennas = [1, 2, 3, 4]
+        config.report_every_n_tags = 1  # Report after every tag seen
+        config.reader_mode = 'MaxThroughput'  # or a valid string like 'AutoSetDenseReader'
+        config.search_mode = 'DualTarget'  # or a mode like 'DualTarget'
+
+        # Configure the fields to include in each tag report
+        config.tag_content_selector = {
+            'EnableAntennaID': True,
+            'EnableChannelIndex': True,
+            'EnablePeakRSSI': True,
+            'EnableFirstSeenTimestamp': True,
+            'EnableLastSeenTimestamp': True,
+            'EnableTagSeenCount': True,
+            'EnableAccessSpecID': True,
+        }
+
         READER = LLRPReaderClient(ip_address, PORT, config)
         READER.add_tag_report_callback(tag_report_cb)
         READER.add_event_callback(connection_event_cb)
         READER.connect()
-        time.sleep(2)  # Wait for connection to stabilize
-
-        print("✅ Reader connected successfully!")
-
-        # Launch tag processing thread
-        tag_thread = threading.Thread(target=process_tags_console, daemon=True)
-        tag_thread.start()
-
-        # # Start user loop
-        # user_interface()
-
+        time.sleep(2)
+        print("Connected to RFID Reader Successfully")
     except Exception as e:
-        print(f"❌ Connection failed: {e}")
-        return
+        print(f"Error connecting reader: {e}")
+
+
+def disconnect_reader():
+    global READER
+    stop_event.set()
+    if READER and READER.is_alive():
+        try:
+            READER.disconnect()
+            print("Reader Disconnected")
+        except Exception as e:
+            print(f"Failed to disconnect: {e}")
+
+
+# -------- MAIN -------- #
+def start_inventory_with_ip(ip_address):
+    global stop_event
+
+    print(f"🔌 Starting inventory for reader at {ip_address}...")
+
+    # Launch tag processing thread
+    tag_thread = threading.Thread(target=process_tags_console, daemon=True)
+    tag_thread.start()
+
 
 def stop_inventory():
     global READER
@@ -271,17 +220,6 @@ def stop_inventory():
     if READER and READER.is_alive():
         try:
             READER.llrp.stop()
-            READER.disconnect()
-            print("🛑 Inventory stopped and reader disconnected.")
+            print("🛑 Inventory stopped")
         except Exception as e:
             print(f"⚠️ Error stopping reader: {e}")
-
-#     # Graceful shutdown
-#     if READER and READER.is_alive():
-#         READER.llrp.stopPolitely()
-#         READER.disconnect()
-#         print("👋 Reader disconnected. Exiting...")
-
-
-# if __name__ == "__main__":
-#     main()
